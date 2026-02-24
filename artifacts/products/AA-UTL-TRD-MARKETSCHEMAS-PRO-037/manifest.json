@@ -1,0 +1,39 @@
+{
+  "product_id": "AA-UTL-TRD-MARKETSCHEMAS-PRO-037",
+  "slug": "utility-trading-market-schemas",
+  "name": "Market Schema Pack",
+  "category": "utility",
+  "subcategory": "json_schema_pack",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "json",
+  "file_count": 22,
+  "included_files": [
+    "market_schemas/",
+    "examples/",
+    "README.md"
+  ],
+  "size_estimate": "3.3MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "market_data_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 129,
+    "compare_at_price": 189
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "hybrid",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

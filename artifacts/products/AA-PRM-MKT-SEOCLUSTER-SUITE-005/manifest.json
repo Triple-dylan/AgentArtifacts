@@ -1,0 +1,36 @@
+{
+  "product_id": "AA-PRM-MKT-SEOCLUSTER-SUITE-005",
+  "slug": "prompt-seo-cluster-suite",
+  "name": "SEO Cluster Prompt Suite",
+  "category": "prompt",
+  "subcategory": "prompt_suite",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 14,
+  "included_files": [
+    "seo_cluster_prompts.md",
+    "intent_maps.md"
+  ],
+  "size_estimate": "1.4MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "5",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 29,
+    "compare_at_price": 49
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "low",
+    "disclosure_required": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "product_id": "AA-AGT-MKT-SEOAUTOPLAN-PRO-025",
+  "slug": "agent-marketing-seo-autoplan",
+  "name": "SEO Autoplan Agent",
+  "category": "agent",
+  "subcategory": "task_agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 20,
+  "included_files": [
+    "agent_config.yaml",
+    "tests.md",
+    "deploy.md",
+    "prompts/"
+  ],
+  "size_estimate": "7.4MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "seo_api",
+    "cms_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 399,
+    "compare_at_price": 599
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "product_id": "AA-SKL-TRD-DATANORMALIZE-PRO-020",
+  "slug": "skill-trading-data-normalize",
+  "name": "Trading Data Normalize Skill",
+  "category": "skill",
+  "subcategory": "io_schema",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md;json",
+  "file_count": 11,
+  "included_files": [
+    "SKILL.md",
+    "market_data_schema.json",
+    "tests.md"
+  ],
+  "size_estimate": "2.6MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "market_data_api",
+    "news_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 149,
+    "compare_at_price": 219
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "hybrid",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

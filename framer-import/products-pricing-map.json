@@ -1,0 +1,170 @@
+{
+  "prompt-ideation-base": {
+    "price_label": "Now $19",
+    "compare_at_label": "Was $29"
+  },
+  "prompt-system-chain": {
+    "price_label": "Now $29",
+    "compare_at_label": "Was $39"
+  },
+  "prompt-marketing-campaign-suite": {
+    "price_label": "Now $29",
+    "compare_at_label": "Was $49"
+  },
+  "prompt-copy-test-pack": {
+    "price_label": "Now $19",
+    "compare_at_label": "Was $29"
+  },
+  "prompt-seo-cluster-suite": {
+    "price_label": "Now $29",
+    "compare_at_label": "Was $49"
+  },
+  "prompt-ticket-triage-pack": {
+    "price_label": "Now $19",
+    "compare_at_label": "Was $29"
+  },
+  "prompt-kb-write-pack": {
+    "price_label": "Now $19",
+    "compare_at_label": "Was $29"
+  },
+  "prompt-agent-handoff-chain": {
+    "price_label": "Now $29",
+    "compare_at_label": "Was $39"
+  },
+  "prompt-trading-market-thesis": {
+    "price_label": "Now $29",
+    "compare_at_label": "Was $49"
+  },
+  "prompt-trading-event-signal": {
+    "price_label": "Now $39",
+    "compare_at_label": "Was $59"
+  },
+  "prompt-trading-trade-plan": {
+    "price_label": "Now $39",
+    "compare_at_label": "Was $59"
+  },
+  "prompt-trading-risk-journal": {
+    "price_label": "Now $29",
+    "compare_at_label": "Was $49"
+  },
+  "skill-tool-router": {
+    "price_label": "Now $89",
+    "compare_at_label": "Was $129"
+  },
+  "skill-io-validate": {
+    "price_label": "Now $99",
+    "compare_at_label": "Was $149"
+  },
+  "skill-error-retry": {
+    "price_label": "Now $89",
+    "compare_at_label": "Was $139"
+  },
+  "skill-marketing-content-pipeline": {
+    "price_label": "Now $129",
+    "compare_at_label": "Was $189"
+  },
+  "skill-marketing-brief-scoring": {
+    "price_label": "Now $79",
+    "compare_at_label": "Was $119"
+  },
+  "skill-support-sla-automation": {
+    "price_label": "Now $109",
+    "compare_at_label": "Was $159"
+  },
+  "skill-support-escalation-flow": {
+    "price_label": "Now $99",
+    "compare_at_label": "Was $149"
+  },
+  "skill-trading-data-normalize": {
+    "price_label": "Now $149",
+    "compare_at_label": "Was $219"
+  },
+  "skill-trading-strategy-io": {
+    "price_label": "Now $169",
+    "compare_at_label": "Was $249"
+  },
+  "skill-trading-risk-check": {
+    "price_label": "Now $189",
+    "compare_at_label": "Was $279"
+  },
+  "skill-trading-execution-adapter": {
+    "price_label": "Now $199",
+    "compare_at_label": "Was $299"
+  },
+  "agent-marketing-content-ops": {
+    "price_label": "Now $499",
+    "compare_at_label": "Was $699"
+  },
+  "agent-marketing-seo-autoplan": {
+    "price_label": "Now $399",
+    "compare_at_label": "Was $599"
+  },
+  "agent-support-ticket-autopilot": {
+    "price_label": "Now $499",
+    "compare_at_label": "Was $699"
+  },
+  "agent-workflow-orchestrator": {
+    "price_label": "Now $449",
+    "compare_at_label": "Was $649"
+  },
+  "agent-trading-signal-engine": {
+    "price_label": "Now $699",
+    "compare_at_label": "Was $999"
+  },
+  "agent-trading-paper-orchestrator": {
+    "price_label": "Now $799",
+    "compare_at_label": "Was $1,199"
+  },
+  "agent-trading-live-coordinator": {
+    "price_label": "Now $999",
+    "compare_at_label": "Was $1,399"
+  },
+  "agent-trading-posttrade-analytics": {
+    "price_label": "Now $699",
+    "compare_at_label": "Was $999"
+  },
+  "utility-json-schema-pack": {
+    "price_label": "Now $79",
+    "compare_at_label": "Was $119"
+  },
+  "utility-guardrails-yaml": {
+    "price_label": "Now $89",
+    "compare_at_label": "Was $129"
+  },
+  "utility-memory-templates": {
+    "price_label": "Now $69",
+    "compare_at_label": "Was $99"
+  },
+  "utility-marketing-openapi-wrapper": {
+    "price_label": "Now $99",
+    "compare_at_label": "Was $149"
+  },
+  "utility-support-policy-templates": {
+    "price_label": "Now $89",
+    "compare_at_label": "Was $129"
+  },
+  "utility-trading-market-schemas": {
+    "price_label": "Now $129",
+    "compare_at_label": "Was $189"
+  },
+  "utility-trading-risk-policy-kit": {
+    "price_label": "Now $149",
+    "compare_at_label": "Was $219"
+  },
+  "doc-agent-cookbook": {
+    "price_label": "Now $49",
+    "compare_at_label": "Was $79"
+  },
+  "doc-compatibility-guide": {
+    "price_label": "Now $39",
+    "compare_at_label": "Was $59"
+  },
+  "doc-marketing-playbook": {
+    "price_label": "Now $69",
+    "compare_at_label": "Was $99"
+  },
+  "doc-support-playbook": {
+    "price_label": "Now $69",
+    "compare_at_label": "Was $99"
+  }
+}

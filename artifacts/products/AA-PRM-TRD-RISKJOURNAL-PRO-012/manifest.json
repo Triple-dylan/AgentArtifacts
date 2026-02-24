@@ -1,0 +1,35 @@
+{
+  "product_id": "AA-PRM-TRD-RISKJOURNAL-PRO-012",
+  "slug": "prompt-trading-risk-journal",
+  "name": "Risk Journal Prompt Pack",
+  "category": "prompt",
+  "subcategory": "prompt_pack",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 12,
+  "included_files": [
+    "risk_journal_prompts.md",
+    "journal_templates.md"
+  ],
+  "size_estimate": "1.1MB",
+  "compatibility": [
+    "openai",
+    "anthropic"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "5",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 29,
+    "compare_at_price": 49
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "hybrid",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

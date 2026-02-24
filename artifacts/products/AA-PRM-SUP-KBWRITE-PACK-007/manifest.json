@@ -1,0 +1,35 @@
+{
+  "product_id": "AA-PRM-SUP-KBWRITE-PACK-007",
+  "slug": "prompt-kb-write-pack",
+  "name": "Knowledge Base Writing Prompts",
+  "category": "prompt",
+  "subcategory": "prompt_pack",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 10,
+  "included_files": [
+    "kb_write_prompts.md",
+    "update_templates.md"
+  ],
+  "size_estimate": "0.9MB",
+  "compatibility": [
+    "openai",
+    "anthropic"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "5",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 19,
+    "compare_at_price": 29
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "low",
+    "disclosure_required": false
+  }
+}

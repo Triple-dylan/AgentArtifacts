@@ -1,0 +1,186 @@
+openapi: 3.1.0
+info:
+  title: Agent Assets Store API
+  version: 0.1.0
+servers:
+  - url: https://api.agentassets.io
+paths:
+  /catalog:
+    get:
+      summary: List catalog products
+      parameters:
+        - in: query
+          name: type
+          schema:
+            type: string
+        - in: query
+          name: vertical
+          schema:
+            type: string
+        - in: query
+          name: compatibility
+          schema:
+            type: string
+        - in: query
+          name: price_min
+          schema:
+            type: number
+        - in: query
+          name: price_max
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Catalog list
+  /catalog/trading:
+    get:
+      summary: List trading products by execution and market filters
+      parameters:
+        - in: query
+          name: execution_mode
+          schema:
+            type: string
+            enum: [research, paper, live, mixed]
+        - in: query
+          name: market_type
+          schema:
+            type: string
+            enum: [prediction, crypto_perps, hybrid]
+        - in: query
+          name: connector
+          schema:
+            type: string
+            enum: [api, websocket, webhook]
+      responses:
+        '200':
+          description: Trading catalog list
+  /registry/index.json:
+    get:
+      summary: Paginated registry index
+      responses:
+        '200':
+          description: Registry index response
+  /registry/products/{id}.json:
+    get:
+      summary: Get product registry object by id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Registry product object
+        '404':
+          description: Not found
+  /registry/products/{id}/risk-profile:
+    get:
+      summary: Get trading risk profile for a product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Risk profile object
+        '404':
+          description: Not found
+  /leads/capture:
+    post:
+      summary: Capture lead for gated library downloads
+      requestBody:
+        required: true
+      responses:
+        '201':
+          description: Lead captured
+  /checkout/session:
+    post:
+      summary: Create Stripe checkout session
+      requestBody:
+        required: true
+      responses:
+        '200':
+          description: Session created
+  /webhooks/stripe:
+    post:
+      summary: Stripe webhook ingestion
+      responses:
+        '200':
+          description: Event processed
+  /disclosures/acknowledge:
+    post:
+      summary: Record disclosure acknowledgement by session order or user
+      requestBody:
+        required: true
+      responses:
+        '201':
+          description: Acknowledgement recorded
+  /paper-trade/simulate:
+    post:
+      summary: Execute simulation workflow for paper trading products
+      requestBody:
+        required: true
+      responses:
+        '200':
+          description: Simulation result
+  /execution/validate-config:
+    post:
+      summary: Validate live execution config preflight without order placement
+      requestBody:
+        required: true
+      responses:
+        '200':
+          description: Config valid
+        '422':
+          description: Config validation error
+  /downloads/signed-url:
+    post:
+      summary: Generate signed URL for entitled product download
+      requestBody:
+        required: true
+      responses:
+        '200':
+          description: Signed URL issued
+        '403':
+          description: Not entitled or disclosure missing
+  /upsell/evaluate:
+    post:
+      summary: Evaluate upsell recommendations for context
+      requestBody:
+        required: true
+      responses:
+        '200':
+          description: Ranked upsell recommendations
+components:
+  schemas:
+    UpsellRecommendation:
+      type: object
+      required: [target_id, recommendation_type, priority]
+      properties:
+        target_id:
+          type: string
+        recommendation_type:
+          type: string
+          enum: [bundle, bundle_upgrade, add_on, service_add_on, bonus, discount]
+        priority:
+          type: integer
+    DisclosureAcknowledgeRequest:
+      type: object
+      required: [disclosure_version, context, product_id]
+      properties:
+        disclosure_version:
+          type: string
+        context:
+          type: string
+          enum: [product_page, checkout, download]
+        product_id:
+          type: string
+        session_id:
+          type: string
+        order_id:
+          type: string
+        user_id:
+          type: string

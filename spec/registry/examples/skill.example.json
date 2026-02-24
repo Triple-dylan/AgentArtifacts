@@ -1,0 +1,65 @@
+{
+  "registry_schema_version": "1.1.0",
+  "id": "AA-SKL-TRD-EXECADAPTER-PRO-023",
+  "type": "skill",
+  "name": "Execution Adapter Skill",
+  "description": "Venue connector skill for paper and live execution routing.",
+  "version": "1.0.0",
+  "format": "md;json;yaml",
+  "files": [
+    {"path": "SKILL.md", "type": "markdown", "bytes": 112230},
+    {"path": "connector_map.json", "type": "json", "bytes": 33211},
+    {"path": "fallback_rules.yaml", "type": "yaml", "bytes": 18890}
+  ],
+  "checksum": "sha256:278a88932bd7553f18de8ef52a41b39d",
+  "size_bytes": 164331,
+  "input_schema": "https://agentassets.io/schemas/trade-action-input-v1",
+  "output_schema": "https://agentassets.io/schemas/execution-result-v1",
+  "compatibility": ["openai", "anthropic", "langchain"],
+  "dependencies": ["exchange_api", "prediction_market_api"],
+  "required_secrets": ["EXCHANGE_API_KEY", "EXCHANGE_API_SECRET", "PREDICTION_MARKET_API_KEY"],
+  "license": {
+    "type": "commercial",
+    "seats": 10,
+    "redistribution_policy": "no_redistribution",
+    "commercial_use": true
+  },
+  "price_usd": 199,
+  "currency": "USD",
+  "billing_type": "one_time",
+  "availability": "draft",
+  "created_at": "2026-02-22T12:00:00Z",
+  "updated_at": "2026-02-22T12:00:00Z",
+  "urls": {
+    "product_page": "https://agentassets.io/products/skill-trading-execution-adapter",
+    "docs": "https://agentassets.io/docs/skill-trading-execution-adapter",
+    "download_endpoint": "https://api.agentassets.io/downloads/AA-SKL-TRD-EXECADAPTER-PRO-023",
+    "sample_endpoint": "https://api.agentassets.io/samples/AA-SKL-TRD-EXECADAPTER-PRO-023",
+    "changelog": "https://agentassets.io/changelog/AA-SKL-TRD-EXECADAPTER-PRO-023"
+  },
+  "tags": ["trading", "execution", "connectors"],
+  "keywords": ["execution adapter skill", "live trading connector"],
+  "support": {
+    "level": "priority",
+    "contact": "support@agentassets.io",
+    "sla": "1 business day"
+  },
+  "execution_mode": "live",
+  "market_type": "hybrid",
+  "connector_type": ["api", "websocket"],
+  "risk_level": "high",
+  "disclosure_required": true,
+  "disclosure_profile": {
+    "disclosure_version": "DISC-1.0.0",
+    "ack_required": true,
+    "display_context": ["product_page", "checkout", "download"]
+  },
+  "risk_profile": {
+    "max_position_size": "2% NAV",
+    "max_exposure_pct": 20,
+    "stop_rules": ["hard_stop_required", "daily_loss_limit_required"],
+    "circuit_breaker_rules": ["volatility_pause", "api_error_pause"]
+  },
+  "trade_action_schema": "https://agentassets.io/schemas/trade-action-v1",
+  "market_data_schema": "https://agentassets.io/schemas/market-data-v1"
+}

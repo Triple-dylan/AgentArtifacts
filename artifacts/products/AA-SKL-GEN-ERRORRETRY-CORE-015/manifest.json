@@ -1,0 +1,37 @@
+{
+  "product_id": "AA-SKL-GEN-ERRORRETRY-CORE-015",
+  "slug": "skill-error-retry",
+  "name": "Error Retry Skill Module",
+  "category": "skill",
+  "subcategory": "error_handling",
+  "version": "1.0.1",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md;yaml",
+  "file_count": 9,
+  "included_files": [
+    "SKILL.md",
+    "retry_policy.yaml",
+    "tests.md"
+  ],
+  "size_estimate": "1.8MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "5",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 89,
+    "compare_at_price": 139
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

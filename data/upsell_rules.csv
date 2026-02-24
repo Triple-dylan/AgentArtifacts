@@ -1,0 +1,11 @@
+rule_id,trigger_event,trigger_filter,recommendation_type,recommendation_target,priority,suppression_condition,window_hours,notes
+UP-001,download,lead_magnet=true AND category=prompt,bundle,AA-BND-GEN-STARTER-STD-043,90,owns_any(AA-BND-GEN-PROSUITE-ELT-049;AA-BND-GEN-ENTERPRISE-CST-050),168,Free prompt to starter bundle
+UP-002,download,lead_magnet=true AND market_type=prediction,bundle,AA-BND-TRD-PREDICTION-STD-047,95,owns_any(AA-BND-TRD-SYSTEMS-PRO-048;AA-BND-GEN-PROSUITE-ELT-049),168,Free trading template to prediction bundle
+UP-003,purchase,category=prompt,add_on,AA-SKL-GEN-TOOLROUTER-CORE-013,80,none,1,Prompt to skill order bump
+UP-004,purchase,category=prompt AND market_type!=none,add_on,AA-SKL-TRD-RISKCHECK-PRO-022,92,none,1,Trading prompt to risk skill
+UP-005,purchase,category=skill AND market_type=hybrid,bundle_upgrade,AA-BND-TRD-SYSTEMS-PRO-048,93,owns_any(AA-BND-TRD-SYSTEMS-PRO-048),168,Skill to trading systems bundle
+UP-006,purchase,product_id=AA-AGT-TRD-PAPERORCH-PRO-029,bundle_upgrade,AA-BND-TRD-SYSTEMS-PRO-048,94,owns_any(AA-BND-TRD-SYSTEMS-PRO-048),168,Paper agent to live capable bundle
+UP-007,purchase,execution_mode=live,service_add_on,support_integration_package,85,none,72,Live SKU to support package
+UP-008,cart_eval,contains_mixed(trading;non_trading)=true,bundle_upgrade,best_fit_bundle_by_savings,88,none,1,Mixed cart bundle optimization
+UP-009,cart_eval,cart_total_usd>=300,bonus,AA-UTL-GEN-MEMORYTEMPLATES-CORE-034,70,already_discounted=true,1,Threshold bonus utility
+UP-010,campaign,time_limited_bundle=true,discount,bundle_flash_10_20_pct,60,redeemed_before=true,72,Flash discount policy

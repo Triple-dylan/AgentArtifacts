@@ -1,0 +1,68 @@
+{
+  "registry_schema_version": "1.1.0",
+  "generated_at": "2026-02-22T12:00:00Z",
+  "pagination": {
+    "page": 1,
+    "page_size": 50,
+    "total_items": 50,
+    "total_pages": 1,
+    "next_page": null,
+    "prev_page": null
+  },
+  "filters": {
+    "types": ["prompt", "skill", "agent", "utility", "doc", "bundle"],
+    "availability": ["draft", "active", "archived"],
+    "execution_mode": ["none", "research", "paper", "live", "mixed"],
+    "market_type": ["none", "prediction", "crypto_perps", "hybrid"]
+  },
+  "items": [
+    {
+      "id": "AA-PRM-GEN-IDEATION-BASE-001",
+      "type": "prompt",
+      "name": "Ideation Prompt Pack",
+      "version": "1.0.0",
+      "price_usd": 19,
+      "availability": "draft",
+      "execution_mode": "none",
+      "market_type": "none",
+      "product_page": "https://agentassets.io/products/prompt-ideation-base",
+      "tags": ["generalist", "prompt"]
+    },
+    {
+      "id": "AA-SKL-TRD-EXECADAPTER-PRO-023",
+      "type": "skill",
+      "name": "Execution Adapter Skill",
+      "version": "1.0.0",
+      "price_usd": 199,
+      "availability": "draft",
+      "execution_mode": "live",
+      "market_type": "hybrid",
+      "product_page": "https://agentassets.io/products/skill-trading-execution-adapter",
+      "tags": ["trading", "execution"]
+    },
+    {
+      "id": "AA-AGT-TRD-LIVECOORD-PRO-030",
+      "type": "agent",
+      "name": "Live Execution Coordinator Agent",
+      "version": "1.0.0",
+      "price_usd": 999,
+      "availability": "draft",
+      "execution_mode": "live",
+      "market_type": "hybrid",
+      "product_page": "https://agentassets.io/products/agent-trading-live-coordinator",
+      "tags": ["trading", "live"]
+    },
+    {
+      "id": "AA-BND-TRD-SYSTEMS-PRO-048",
+      "type": "bundle",
+      "name": "Trading Systems Kit",
+      "version": "1.0.0",
+      "price_usd": 2499,
+      "availability": "draft",
+      "execution_mode": "mixed",
+      "market_type": "hybrid",
+      "product_page": "https://agentassets.io/products/bundle-trading-systems-kit",
+      "tags": ["bundle", "trading"]
+    }
+  ]
+}

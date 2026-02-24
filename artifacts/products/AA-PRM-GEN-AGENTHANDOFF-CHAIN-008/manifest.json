@@ -1,0 +1,36 @@
+{
+  "product_id": "AA-PRM-GEN-AGENTHANDOFF-CHAIN-008",
+  "slug": "prompt-agent-handoff-chain",
+  "name": "Agent Handoff Prompt Chain",
+  "category": "prompt",
+  "subcategory": "prompt_chain",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 15,
+  "included_files": [
+    "handoff_chain.md",
+    "state_templates.md"
+  ],
+  "size_estimate": "1.5MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "3",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 29,
+    "compare_at_price": 39
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

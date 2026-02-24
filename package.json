@@ -1,0 +1,27 @@
+{
+  "name": "agent-artifacts-store",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Implementation scaffold for agent-native AI asset store",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "node apps/api/src/server.js",
+    "test": "node --test tests/*.test.js",
+    "validate:data": "node scripts/validate-data.js",
+    "build:registry": "node scripts/generate-registry.js",
+    "build:artifacts": "node scripts/generate-product-artifacts.js",
+    "build:framer-import": "node scripts/generate-framer-import.js",
+    "sync:stripe-links": "node scripts/sync-stripe-links.js",
+    "db:migrate": "node scripts/migrate-db.js",
+    "db:seed": "node scripts/seed-db.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

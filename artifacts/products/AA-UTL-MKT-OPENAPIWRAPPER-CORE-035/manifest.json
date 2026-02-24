@@ -1,0 +1,39 @@
+{
+  "product_id": "AA-UTL-MKT-OPENAPIWRAPPER-CORE-035",
+  "slug": "utility-marketing-openapi-wrapper",
+  "name": "Marketing OpenAPI Wrapper Pack",
+  "category": "utility",
+  "subcategory": "openapi_wrapper",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "yaml;json",
+  "file_count": 14,
+  "included_files": [
+    "openapi_wrappers/",
+    "adapter_templates/",
+    "README.md"
+  ],
+  "size_estimate": "2.2MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "openapi_tooling"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 99,
+    "compare_at_price": 149
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

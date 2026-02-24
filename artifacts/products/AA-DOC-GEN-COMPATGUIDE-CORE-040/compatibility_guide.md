@@ -1,0 +1,8 @@
+# Compatibility Guide - compatibility_guide.md
+
+Starter template generated from catalog metadata.
+Replace this content with production-ready material before launch.
+
+Product ID: AA-DOC-GEN-COMPATGUIDE-CORE-040
+Version: 1.0.0
+Category: doc

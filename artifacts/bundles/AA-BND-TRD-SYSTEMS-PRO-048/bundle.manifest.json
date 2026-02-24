@@ -1,0 +1,81 @@
+{
+  "bundle_id": "AA-BND-TRD-SYSTEMS-PRO-048",
+  "slug": "bundle-trading-systems-kit",
+  "name": "Trading Systems Kit",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 2499,
+  "compare_at_price": 3553,
+  "execution_mode": "mixed",
+  "market_type": "hybrid",
+  "risk_level": "high",
+  "disclosure_required": true,
+  "contents": [
+    {
+      "product_id": "AA-PRM-TRD-EVENTSIGNAL-PRO-010",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Signal prompts"
+    },
+    {
+      "product_id": "AA-PRM-TRD-TRADEPLAN-PRO-011",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Trade planning prompts"
+    },
+    {
+      "product_id": "AA-SKL-TRD-STRATEGYIO-PRO-021",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Strategy schemas skill"
+    },
+    {
+      "product_id": "AA-SKL-TRD-RISKCHECK-PRO-022",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Risk controls skill"
+    },
+    {
+      "product_id": "AA-SKL-TRD-EXECADAPTER-PRO-023",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Execution adapter skill"
+    },
+    {
+      "product_id": "AA-AGT-TRD-SIGNALENGINE-PRO-028",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Signal agent"
+    },
+    {
+      "product_id": "AA-AGT-TRD-PAPERORCH-PRO-029",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Paper trading agent"
+    },
+    {
+      "product_id": "AA-AGT-TRD-LIVECOORD-PRO-030",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Live coordinator agent"
+    },
+    {
+      "product_id": "AA-AGT-TRD-POSTTRADEANALYTICS-PRO-031",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "Post trade analytics agent"
+    },
+    {
+      "product_id": "AA-UTL-TRD-MARKETSCHEMAS-PRO-037",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Market schemas"
+    },
+    {
+      "product_id": "AA-UTL-TRD-RISKPOLICYKIT-PRO-038",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Risk policy kit"
+    }
+  ]
+}

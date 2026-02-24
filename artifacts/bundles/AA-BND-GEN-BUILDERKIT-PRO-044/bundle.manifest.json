@@ -1,0 +1,63 @@
+{
+  "bundle_id": "AA-BND-GEN-BUILDERKIT-PRO-044",
+  "slug": "bundle-agent-builder-kit",
+  "name": "Agent Builder Kit",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 999,
+  "compare_at_price": 1414,
+  "execution_mode": "mixed",
+  "market_type": "none",
+  "risk_level": "med",
+  "disclosure_required": false,
+  "contents": [
+    {
+      "product_id": "AA-PRM-GEN-SYSTEMCHAIN-PRO-002",
+      "quantity": 1,
+      "role": "core",
+      "notes": "System chain prompts"
+    },
+    {
+      "product_id": "AA-PRM-GEN-AGENTHANDOFF-CHAIN-008",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Handoff prompts"
+    },
+    {
+      "product_id": "AA-SKL-GEN-TOOLROUTER-CORE-013",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Routing skill"
+    },
+    {
+      "product_id": "AA-SKL-GEN-IOVALIDATE-CORE-014",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Validation skill"
+    },
+    {
+      "product_id": "AA-SKL-GEN-ERRORRETRY-CORE-015",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Resilience skill"
+    },
+    {
+      "product_id": "AA-UTL-GEN-JSONSCHEMAPACK-CORE-032",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Schema utilities"
+    },
+    {
+      "product_id": "AA-UTL-GEN-GUARDRAILSYAML-CORE-033",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Guardrails utilities"
+    },
+    {
+      "product_id": "AA-AGT-GEN-WORKFLOWORCH-PRO-027",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "Orchestration agent"
+    }
+  ]
+}

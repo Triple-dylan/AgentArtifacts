@@ -1,0 +1,41 @@
+{
+  "product_id": "AA-AGT-SUP-TICKETAUTOPILOT-PRO-026",
+  "slug": "agent-support-ticket-autopilot",
+  "name": "Ticket Autopilot Agent",
+  "category": "agent",
+  "subcategory": "workflow_agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 22,
+  "included_files": [
+    "agent_config.yaml",
+    "tests.md",
+    "deploy.md",
+    "playbooks/"
+  ],
+  "size_estimate": "8.1MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "helpdesk_api",
+    "notification_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 499,
+    "compare_at_price": 699
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

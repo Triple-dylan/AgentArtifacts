@@ -1,0 +1,41 @@
+{
+  "product_id": "AA-AGT-TRD-SIGNALENGINE-PRO-028",
+  "slug": "agent-trading-signal-engine",
+  "name": "Signal Engine Agent",
+  "category": "agent",
+  "subcategory": "vertical_agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 26,
+  "included_files": [
+    "agent_config.yaml",
+    "strategy_templates/",
+    "tests.md",
+    "deploy.md"
+  ],
+  "size_estimate": "9.6MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "market_data_api",
+    "news_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 699,
+    "compare_at_price": 999
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "hybrid",
+    "risk_level": "high",
+    "disclosure_required": true
+  }
+}

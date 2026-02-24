@@ -1,0 +1,34 @@
+{
+  "bundle-starter": {
+    "price_label": "Now $249",
+    "compare_at_label": "Was $346"
+  },
+  "bundle-agent-builder-kit": {
+    "price_label": "Now $999",
+    "compare_at_label": "Was $1,414"
+  },
+  "bundle-marketing-vertical": {
+    "price_label": "Now $1,299",
+    "compare_at_label": "Was $1,842"
+  },
+  "bundle-support-vertical": {
+    "price_label": "Now $1,299",
+    "compare_at_label": "Was $1,842"
+  },
+  "bundle-prediction-market-starter": {
+    "price_label": "Now $1,499",
+    "compare_at_label": "Was $2,135"
+  },
+  "bundle-trading-systems-kit": {
+    "price_label": "Now $2,499",
+    "compare_at_label": "Was $3,553"
+  },
+  "bundle-pro-suite": {
+    "price_label": "Now $2,999",
+    "compare_at_label": "Was $4,899"
+  },
+  "bundle-enterprise-kit": {
+    "price_label": "Now $5,000",
+    "compare_at_label": "Was $9,000"
+  }
+}

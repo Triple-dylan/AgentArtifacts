@@ -1,0 +1,4 @@
+disclosure_version,effective_date,title,applies_to,summary,status
+DISC-1.0.0,2026-02-22,General Trading Disclosure,execution_mode=live OR risk_level=high,Tooling and education only no investment advice user controlled execution required,active
+DISC-1.0.0-PAPER,2026-02-22,Paper Trading Disclosure,execution_mode=paper,Simulation outputs are hypothetical and not performance guarantees,active
+DISC-1.0.0-RESEARCH,2026-02-22,Research Content Disclosure,execution_mode=research,Research artifacts are informational and require independent judgment,active

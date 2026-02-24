@@ -1,0 +1,36 @@
+{
+  "product_id": "AA-PRM-GEN-SYSTEMCHAIN-PRO-002",
+  "slug": "prompt-system-chain",
+  "name": "System Chain Prompt Suite",
+  "category": "prompt",
+  "subcategory": "prompt_suite",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 18,
+  "included_files": [
+    "system_chain.md",
+    "handoff_templates.md"
+  ],
+  "size_estimate": "1.8MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "3",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 29,
+    "compare_at_price": 39
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "low",
+    "disclosure_required": false
+  }
+}

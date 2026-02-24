@@ -1,0 +1,43 @@
+{
+  "product_id": "AA-AGT-TRD-LIVECOORD-PRO-030",
+  "slug": "agent-trading-live-coordinator",
+  "name": "Live Execution Coordinator Agent",
+  "category": "agent",
+  "subcategory": "vertical_agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 30,
+  "included_files": [
+    "agent_config.yaml",
+    "live_runbook.md",
+    "tests.md",
+    "deploy.md",
+    "guardrails/"
+  ],
+  "size_estimate": "11.4MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "exchange_api",
+    "prediction_market_api",
+    "risk_engine"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 999,
+    "compare_at_price": 1399
+  },
+  "trading": {
+    "execution_mode": "live",
+    "market_type": "hybrid",
+    "risk_level": "high",
+    "disclosure_required": true
+  }
+}

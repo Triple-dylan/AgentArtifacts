@@ -1,0 +1,37 @@
+{
+  "product_id": "AA-UTL-GEN-GUARDRAILSYAML-CORE-033",
+  "slug": "utility-guardrails-yaml",
+  "name": "Guardrails YAML Kit",
+  "category": "utility",
+  "subcategory": "guardrails_yaml",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "yaml",
+  "file_count": 18,
+  "included_files": [
+    "guardrails/",
+    "policy_templates/",
+    "README.md"
+  ],
+  "size_estimate": "2.5MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 89,
+    "compare_at_price": 129
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

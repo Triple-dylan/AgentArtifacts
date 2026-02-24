@@ -1,0 +1,40 @@
+{
+  "product_id": "AA-SKL-TRD-RISKCHECK-PRO-022",
+  "slug": "skill-trading-risk-check",
+  "name": "Risk Check Skill",
+  "category": "skill",
+  "subcategory": "error_handling",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md;yaml;json",
+  "file_count": 12,
+  "included_files": [
+    "SKILL.md",
+    "risk_profile.yaml",
+    "trade_action_schema.json"
+  ],
+  "size_estimate": "2.8MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "market_data_api",
+    "risk_engine"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 189,
+    "compare_at_price": 279
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "hybrid",
+    "risk_level": "high",
+    "disclosure_required": true
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+.next/
+dist/
+coverage/
+spec/registry/generated/
+.env
+.env.local
+.env*.local
+*.log
+.DS_Store
+tmp_test_write.txt
+stripe_backup_code.txt

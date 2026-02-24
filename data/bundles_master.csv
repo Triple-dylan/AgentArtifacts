@@ -1,0 +1,52 @@
+bundle_id,bundle_name,component_product_id,quantity,role,notes
+AA-BND-GEN-STARTER-STD-043,Starter Bundle,AA-PRM-GEN-IDEATION-BASE-001,1,core,Foundational prompt pack
+AA-BND-GEN-STARTER-STD-043,Starter Bundle,AA-UTL-GEN-MEMORYTEMPLATES-CORE-034,1,core,Memory templates
+AA-BND-GEN-STARTER-STD-043,Starter Bundle,AA-DOC-GEN-AGENTCOOKBOOK-CORE-039,1,core,Cookbook guide
+AA-BND-GEN-STARTER-STD-043,Starter Bundle,AA-DOC-GEN-COMPATGUIDE-CORE-040,1,add_on,Compatibility reference
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-PRM-GEN-SYSTEMCHAIN-PRO-002,1,core,System chain prompts
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-PRM-GEN-AGENTHANDOFF-CHAIN-008,1,core,Handoff prompts
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-SKL-GEN-TOOLROUTER-CORE-013,1,core,Routing skill
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-SKL-GEN-IOVALIDATE-CORE-014,1,core,Validation skill
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-SKL-GEN-ERRORRETRY-CORE-015,1,core,Resilience skill
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-UTL-GEN-JSONSCHEMAPACK-CORE-032,1,core,Schema utilities
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-UTL-GEN-GUARDRAILSYAML-CORE-033,1,core,Guardrails utilities
+AA-BND-GEN-BUILDERKIT-PRO-044,Agent Builder Kit,AA-AGT-GEN-WORKFLOWORCH-PRO-027,1,add_on,Orchestration agent
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-PRM-MKT-CAMPAIGN-SUITE-003,1,core,Campaign prompts
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-PRM-MKT-COPYTEST-PACK-004,1,core,Copy testing prompts
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-PRM-MKT-SEOCLUSTER-SUITE-005,1,core,SEO prompts
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-SKL-MKT-CONTENTPIPE-PRO-016,1,core,Content workflow skill
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-SKL-MKT-BRIEFSCORING-PRO-017,1,add_on,Brief scoring skill
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-AGT-MKT-CONTENTOPS-PRO-024,1,core,Content ops agent
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-AGT-MKT-SEOAUTOPLAN-PRO-025,1,core,SEO planning agent
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-UTL-MKT-OPENAPIWRAPPER-CORE-035,1,add_on,API wrappers
+AA-BND-MKT-VERTICAL-PRO-045,Marketing Vertical Pack,AA-DOC-MKT-PLAYBOOK-CORE-041,1,core,Playbook
+AA-BND-SUP-VERTICAL-PRO-046,Support Ops Vertical Pack,AA-PRM-SUP-TICKETTRIAGE-PACK-006,1,core,Ticket prompts
+AA-BND-SUP-VERTICAL-PRO-046,Support Ops Vertical Pack,AA-PRM-SUP-KBWRITE-PACK-007,1,core,Knowledge base prompts
+AA-BND-SUP-VERTICAL-PRO-046,Support Ops Vertical Pack,AA-SKL-SUP-SLAAUTOMATION-PRO-018,1,core,SLA skill
+AA-BND-SUP-VERTICAL-PRO-046,Support Ops Vertical Pack,AA-SKL-SUP-ESCALATIONFLOW-PRO-019,1,core,Escalation skill
+AA-BND-SUP-VERTICAL-PRO-046,Support Ops Vertical Pack,AA-AGT-SUP-TICKETAUTOPILOT-PRO-026,1,core,Support agent
+AA-BND-SUP-VERTICAL-PRO-046,Support Ops Vertical Pack,AA-UTL-SUP-POLICYTEMPLATES-CORE-036,1,add_on,Policy templates
+AA-BND-SUP-VERTICAL-PRO-046,Support Ops Vertical Pack,AA-DOC-SUP-PLAYBOOK-CORE-042,1,core,Support playbook
+AA-BND-TRD-PREDICTION-STD-047,Prediction Market Starter Pack,AA-PRM-TRD-MARKETTHESIS-PRO-009,1,core,Market thesis prompts
+AA-BND-TRD-PREDICTION-STD-047,Prediction Market Starter Pack,AA-PRM-TRD-RISKJOURNAL-PRO-012,1,core,Risk journaling prompts
+AA-BND-TRD-PREDICTION-STD-047,Prediction Market Starter Pack,AA-SKL-TRD-DATANORMALIZE-PRO-020,1,core,Data normalization skill
+AA-BND-TRD-PREDICTION-STD-047,Prediction Market Starter Pack,AA-UTL-TRD-MARKETSCHEMAS-PRO-037,1,core,Market schemas
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-PRM-TRD-EVENTSIGNAL-PRO-010,1,core,Signal prompts
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-PRM-TRD-TRADEPLAN-PRO-011,1,core,Trade planning prompts
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-SKL-TRD-STRATEGYIO-PRO-021,1,core,Strategy schemas skill
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-SKL-TRD-RISKCHECK-PRO-022,1,core,Risk controls skill
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-SKL-TRD-EXECADAPTER-PRO-023,1,core,Execution adapter skill
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-AGT-TRD-SIGNALENGINE-PRO-028,1,core,Signal agent
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-AGT-TRD-PAPERORCH-PRO-029,1,core,Paper trading agent
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-AGT-TRD-LIVECOORD-PRO-030,1,core,Live coordinator agent
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-AGT-TRD-POSTTRADEANALYTICS-PRO-031,1,add_on,Post trade analytics agent
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-UTL-TRD-MARKETSCHEMAS-PRO-037,1,core,Market schemas
+AA-BND-TRD-SYSTEMS-PRO-048,Trading Systems Kit,AA-UTL-TRD-RISKPOLICYKIT-PRO-038,1,core,Risk policy kit
+AA-BND-GEN-PROSUITE-ELT-049,Pro Suite,AA-BND-GEN-BUILDERKIT-PRO-044,1,core,Includes Builder Kit
+AA-BND-GEN-PROSUITE-ELT-049,Pro Suite,AA-BND-MKT-VERTICAL-PRO-045,1,core,Includes Marketing Pack
+AA-BND-GEN-PROSUITE-ELT-049,Pro Suite,AA-BND-SUP-VERTICAL-PRO-046,1,core,Includes Support Pack
+AA-BND-GEN-PROSUITE-ELT-049,Pro Suite,AA-BND-TRD-SYSTEMS-PRO-048,1,core,Includes Trading Kit
+AA-BND-GEN-PROSUITE-ELT-049,Pro Suite,AA-UTL-TRD-RISKPOLICYKIT-PRO-038,1,add_on,Risk control expansion
+AA-BND-GEN-ENTERPRISE-CST-050,Enterprise Kit,AA-BND-GEN-PROSUITE-ELT-049,1,core,Base package
+AA-BND-GEN-ENTERPRISE-CST-050,Enterprise Kit,AA-AGT-TRD-LIVECOORD-PRO-030,1,core,Live execution package
+AA-BND-GEN-ENTERPRISE-CST-050,Enterprise Kit,AA-DOC-GEN-COMPATGUIDE-CORE-040,1,add_on,Integration and compliance docs

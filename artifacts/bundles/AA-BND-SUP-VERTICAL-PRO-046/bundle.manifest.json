@@ -1,0 +1,57 @@
+{
+  "bundle_id": "AA-BND-SUP-VERTICAL-PRO-046",
+  "slug": "bundle-support-vertical",
+  "name": "Support Ops Vertical Pack",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 1299,
+  "compare_at_price": 1842,
+  "execution_mode": "mixed",
+  "market_type": "none",
+  "risk_level": "med",
+  "disclosure_required": false,
+  "contents": [
+    {
+      "product_id": "AA-PRM-SUP-TICKETTRIAGE-PACK-006",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Ticket prompts"
+    },
+    {
+      "product_id": "AA-PRM-SUP-KBWRITE-PACK-007",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Knowledge base prompts"
+    },
+    {
+      "product_id": "AA-SKL-SUP-SLAAUTOMATION-PRO-018",
+      "quantity": 1,
+      "role": "core",
+      "notes": "SLA skill"
+    },
+    {
+      "product_id": "AA-SKL-SUP-ESCALATIONFLOW-PRO-019",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Escalation skill"
+    },
+    {
+      "product_id": "AA-AGT-SUP-TICKETAUTOPILOT-PRO-026",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Support agent"
+    },
+    {
+      "product_id": "AA-UTL-SUP-POLICYTEMPLATES-CORE-036",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "Policy templates"
+    },
+    {
+      "product_id": "AA-DOC-SUP-PLAYBOOK-CORE-042",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Support playbook"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "product_id": "AA-PRM-TRD-TRADEPLAN-PRO-011",
+  "slug": "prompt-trading-trade-plan",
+  "name": "Trade Plan Prompt Chain",
+  "category": "prompt",
+  "subcategory": "prompt_chain",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 15,
+  "included_files": [
+    "trade_plan_chain.md",
+    "review_templates.md"
+  ],
+  "size_estimate": "1.5MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "cursor"
+  ],
+  "dependencies": [
+    "market_data_api"
+  ],
+  "license_type": "commercial",
+  "seats": "5",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 39,
+    "compare_at_price": 59
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "crypto_perps",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

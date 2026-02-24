@@ -1,0 +1,45 @@
+{
+  "bundle_id": "AA-BND-GEN-PROSUITE-ELT-049",
+  "slug": "bundle-pro-suite",
+  "name": "Pro Suite",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 2999,
+  "compare_at_price": 4899,
+  "execution_mode": "mixed",
+  "market_type": "hybrid",
+  "risk_level": "high",
+  "disclosure_required": true,
+  "contents": [
+    {
+      "product_id": "AA-BND-GEN-BUILDERKIT-PRO-044",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Includes Builder Kit"
+    },
+    {
+      "product_id": "AA-BND-MKT-VERTICAL-PRO-045",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Includes Marketing Pack"
+    },
+    {
+      "product_id": "AA-BND-SUP-VERTICAL-PRO-046",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Includes Support Pack"
+    },
+    {
+      "product_id": "AA-BND-TRD-SYSTEMS-PRO-048",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Includes Trading Kit"
+    },
+    {
+      "product_id": "AA-UTL-TRD-RISKPOLICYKIT-PRO-038",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "Risk control expansion"
+    }
+  ]
+}

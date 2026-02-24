@@ -1,0 +1,39 @@
+{
+  "product_id": "AA-UTL-TRD-RISKPOLICYKIT-PRO-038",
+  "slug": "utility-trading-risk-policy-kit",
+  "name": "Trading Risk Policy Kit",
+  "category": "utility",
+  "subcategory": "guardrails_yaml",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "yaml;json",
+  "file_count": 19,
+  "included_files": [
+    "risk_policies/",
+    "guardrails/",
+    "README.md"
+  ],
+  "size_estimate": "3.1MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "risk_engine"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 149,
+    "compare_at_price": 219
+  },
+  "trading": {
+    "execution_mode": "live",
+    "market_type": "hybrid",
+    "risk_level": "high",
+    "disclosure_required": true
+  }
+}

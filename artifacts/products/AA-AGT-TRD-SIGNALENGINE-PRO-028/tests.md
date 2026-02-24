@@ -1,0 +1,8 @@
+# Signal Engine Agent - tests.md
+
+Starter template generated from catalog metadata.
+Replace this content with production-ready material before launch.
+
+Product ID: AA-AGT-TRD-SIGNALENGINE-PRO-028
+Version: 1.0.0
+Category: agent

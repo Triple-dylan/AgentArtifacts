@@ -1,0 +1,50 @@
+{
+  "registry_schema_version": "1.1.0",
+  "id": "AA-PRM-TRD-MARKETTHESIS-PRO-009",
+  "type": "prompt",
+  "name": "Market Thesis Prompt Pack",
+  "description": "Research prompts for event thesis and scenario trees.",
+  "version": "1.0.0",
+  "format": "md",
+  "files": [
+    {"path": "market_thesis_prompts.md", "type": "markdown", "bytes": 84210},
+    {"path": "scenario_tree.md", "type": "markdown", "bytes": 44421}
+  ],
+  "checksum": "sha256:8cebe2a6f11456d2c9bc7f4a40efb43f",
+  "size_bytes": 128631,
+  "compatibility": ["openai", "anthropic", "cursor"],
+  "dependencies": ["news_api", "market_data_api"],
+  "required_secrets": ["NEWS_API_KEY", "MARKET_DATA_API_KEY"],
+  "license": {
+    "type": "commercial",
+    "seats": 5,
+    "redistribution_policy": "no_redistribution",
+    "commercial_use": true
+  },
+  "price_usd": 29,
+  "currency": "USD",
+  "billing_type": "one_time",
+  "availability": "draft",
+  "created_at": "2026-02-22T12:00:00Z",
+  "updated_at": "2026-02-22T12:00:00Z",
+  "urls": {
+    "product_page": "https://agentassets.io/products/prompt-trading-market-thesis",
+    "docs": "https://agentassets.io/docs/prompt-trading-market-thesis",
+    "download_endpoint": "https://api.agentassets.io/downloads/AA-PRM-TRD-MARKETTHESIS-PRO-009",
+    "sample_endpoint": "https://api.agentassets.io/samples/AA-PRM-TRD-MARKETTHESIS-PRO-009",
+    "changelog": "https://agentassets.io/changelog/AA-PRM-TRD-MARKETTHESIS-PRO-009"
+  },
+  "tags": ["trading", "prediction", "research"],
+  "keywords": ["prediction market prompts", "event trading prompts"],
+  "support": {
+    "level": "priority",
+    "contact": "support@agentassets.io",
+    "sla": "1 business day"
+  },
+  "execution_mode": "research",
+  "market_type": "prediction",
+  "connector_type": ["api"],
+  "risk_level": "med",
+  "disclosure_required": false,
+  "market_data_schema": "https://agentassets.io/schemas/market-data-v1"
+}

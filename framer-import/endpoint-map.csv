@@ -1,0 +1,7 @@
+key,endpoint,method,usage
+catalog,https://api.agentassets.io/catalog,GET,Catalog list
+trading_catalog,https://api.agentassets.io/catalog/trading,GET,Trading filter list
+checkout_session,https://api.agentassets.io/checkout/session,POST,Create checkout session
+disclosure_ack,https://api.agentassets.io/disclosures/acknowledge,POST,Record disclosure acknowledgement
+signed_download,https://api.agentassets.io/downloads/signed-url,POST,Entitlement + disclosure gated download
+upsell,https://api.agentassets.io/upsell/evaluate,POST,Get recommendation list

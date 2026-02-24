@@ -1,0 +1,5 @@
+# Starter template generated from catalog metadata
+product_id: AA-SKL-GEN-ERRORRETRY-CORE-015
+slug: skill-error-retry
+version: 1.0.1
+replace_with_production_content: true

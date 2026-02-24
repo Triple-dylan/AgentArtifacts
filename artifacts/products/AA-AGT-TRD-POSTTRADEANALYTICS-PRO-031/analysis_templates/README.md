@@ -1,0 +1,8 @@
+# Post Trade Analytics Agent - README.md
+
+Starter template generated from catalog metadata.
+Replace this content with production-ready material before launch.
+
+Product ID: AA-AGT-TRD-POSTTRADEANALYTICS-PRO-031
+Version: 1.0.0
+Category: agent

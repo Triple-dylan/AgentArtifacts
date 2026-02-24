@@ -1,0 +1,41 @@
+{
+  "product_id": "AA-AGT-MKT-CONTENTOPS-PRO-024",
+  "slug": "agent-marketing-content-ops",
+  "name": "Content Ops Agent",
+  "category": "agent",
+  "subcategory": "workflow_agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 24,
+  "included_files": [
+    "agent_config.yaml",
+    "tests.md",
+    "deploy.md",
+    "templates/"
+  ],
+  "size_estimate": "8.5MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "cms_api",
+    "scheduler"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 499,
+    "compare_at_price": 699
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "bundle_id": "AA-BND-TRD-PREDICTION-STD-047",
+  "slug": "bundle-prediction-market-starter",
+  "name": "Prediction Market Starter Pack",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 1499,
+  "compare_at_price": 2135,
+  "execution_mode": "mixed",
+  "market_type": "prediction",
+  "risk_level": "high",
+  "disclosure_required": true,
+  "contents": [
+    {
+      "product_id": "AA-PRM-TRD-MARKETTHESIS-PRO-009",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Market thesis prompts"
+    },
+    {
+      "product_id": "AA-PRM-TRD-RISKJOURNAL-PRO-012",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Risk journaling prompts"
+    },
+    {
+      "product_id": "AA-SKL-TRD-DATANORMALIZE-PRO-020",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Data normalization skill"
+    },
+    {
+      "product_id": "AA-UTL-TRD-MARKETSCHEMAS-PRO-037",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Market schemas"
+    }
+  ]
+}

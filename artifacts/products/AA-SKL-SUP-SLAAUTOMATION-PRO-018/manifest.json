@@ -1,0 +1,40 @@
+{
+  "product_id": "AA-SKL-SUP-SLAAUTOMATION-PRO-018",
+  "slug": "skill-support-sla-automation",
+  "name": "SLA Automation Skill",
+  "category": "skill",
+  "subcategory": "workflow_skill",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md;yaml",
+  "file_count": 10,
+  "included_files": [
+    "SKILL.md",
+    "sla_policy.yaml",
+    "tests.md"
+  ],
+  "size_estimate": "2.2MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "cursor",
+    "langchain"
+  ],
+  "dependencies": [
+    "helpdesk_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 109,
+    "compare_at_price": 159
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

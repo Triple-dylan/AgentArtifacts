@@ -1,0 +1,39 @@
+{
+  "product_id": "AA-PRM-TRD-MARKETTHESIS-PRO-009",
+  "slug": "prompt-trading-market-thesis",
+  "name": "Market Thesis Prompt Pack",
+  "category": "prompt",
+  "subcategory": "prompt_pack",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 14,
+  "included_files": [
+    "market_thesis_prompts.md",
+    "scenario_tree.md"
+  ],
+  "size_estimate": "1.6MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "cursor"
+  ],
+  "dependencies": [
+    "news_api",
+    "market_data_api"
+  ],
+  "license_type": "commercial",
+  "seats": "5",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 29,
+    "compare_at_price": 49
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "prediction",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

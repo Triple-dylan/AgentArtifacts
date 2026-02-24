@@ -1,0 +1,33 @@
+{
+  "bundle_id": "AA-BND-GEN-ENTERPRISE-CST-050",
+  "slug": "bundle-enterprise-kit",
+  "name": "Enterprise Kit",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 5000,
+  "compare_at_price": 9000,
+  "execution_mode": "mixed",
+  "market_type": "hybrid",
+  "risk_level": "high",
+  "disclosure_required": true,
+  "contents": [
+    {
+      "product_id": "AA-BND-GEN-PROSUITE-ELT-049",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Base package"
+    },
+    {
+      "product_id": "AA-AGT-TRD-LIVECOORD-PRO-030",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Live execution package"
+    },
+    {
+      "product_id": "AA-DOC-GEN-COMPATGUIDE-CORE-040",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "Integration and compliance docs"
+    }
+  ]
+}

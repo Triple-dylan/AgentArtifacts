@@ -1,0 +1,39 @@
+{
+  "bundle_id": "AA-BND-GEN-STARTER-STD-043",
+  "slug": "bundle-starter",
+  "name": "Starter Bundle",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 249,
+  "compare_at_price": 346,
+  "execution_mode": "mixed",
+  "market_type": "none",
+  "risk_level": "low",
+  "disclosure_required": false,
+  "contents": [
+    {
+      "product_id": "AA-PRM-GEN-IDEATION-BASE-001",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Foundational prompt pack"
+    },
+    {
+      "product_id": "AA-UTL-GEN-MEMORYTEMPLATES-CORE-034",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Memory templates"
+    },
+    {
+      "product_id": "AA-DOC-GEN-AGENTCOOKBOOK-CORE-039",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Cookbook guide"
+    },
+    {
+      "product_id": "AA-DOC-GEN-COMPATGUIDE-CORE-040",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "Compatibility reference"
+    }
+  ]
+}

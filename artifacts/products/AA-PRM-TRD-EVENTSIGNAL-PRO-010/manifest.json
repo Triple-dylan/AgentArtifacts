@@ -1,0 +1,39 @@
+{
+  "product_id": "AA-PRM-TRD-EVENTSIGNAL-PRO-010",
+  "slug": "prompt-trading-event-signal",
+  "name": "Event Driven Signal Prompt Suite",
+  "category": "prompt",
+  "subcategory": "prompt_suite",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md",
+  "file_count": 16,
+  "included_files": [
+    "event_signal_prompts.md",
+    "signal_scorecards.md"
+  ],
+  "size_estimate": "1.7MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "news_api",
+    "market_data_api"
+  ],
+  "license_type": "commercial",
+  "seats": "5",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 39,
+    "compare_at_price": 59
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "hybrid",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

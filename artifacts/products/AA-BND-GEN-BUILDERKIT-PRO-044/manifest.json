@@ -1,0 +1,36 @@
+{
+  "product_id": "AA-BND-GEN-BUILDERKIT-PRO-044",
+  "slug": "bundle-agent-builder-kit",
+  "name": "Agent Builder Kit",
+  "category": "bundle",
+  "subcategory": "builder_bundle",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 0,
+  "included_files": [
+    "manifest_only"
+  ],
+  "size_estimate": "0MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "cursor",
+    "langchain"
+  ],
+  "dependencies": [],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 999,
+    "compare_at_price": 1414
+  },
+  "trading": {
+    "execution_mode": "mixed",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

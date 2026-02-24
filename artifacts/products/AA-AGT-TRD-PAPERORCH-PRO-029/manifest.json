@@ -1,0 +1,41 @@
+{
+  "product_id": "AA-AGT-TRD-PAPERORCH-PRO-029",
+  "slug": "agent-trading-paper-orchestrator",
+  "name": "Paper Trading Orchestrator Agent",
+  "category": "agent",
+  "subcategory": "vertical_agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 27,
+  "included_files": [
+    "agent_config.yaml",
+    "simulator_templates/",
+    "tests.md",
+    "deploy.md"
+  ],
+  "size_estimate": "10.2MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "market_data_api",
+    "paper_trading_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 799,
+    "compare_at_price": 1199
+  },
+  "trading": {
+    "execution_mode": "paper",
+    "market_type": "hybrid",
+    "risk_level": "high",
+    "disclosure_required": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "product_id": "AA-BND-GEN-ENTERPRISE-CST-050",
+  "slug": "bundle-enterprise-kit",
+  "name": "Enterprise Kit",
+  "category": "bundle",
+  "subcategory": "enterprise_kit",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 0,
+  "included_files": [
+    "manifest_only"
+  ],
+  "size_estimate": "0MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "cursor",
+    "langchain"
+  ],
+  "dependencies": [
+    "custom_integration"
+  ],
+  "license_type": "seat_based",
+  "seats": "custom",
+  "redistribution_policy": "custom_contract",
+  "pricing": {
+    "price_usd": 5000,
+    "compare_at_price": 9000
+  },
+  "trading": {
+    "execution_mode": "mixed",
+    "market_type": "hybrid",
+    "risk_level": "high",
+    "disclosure_required": true
+  }
+}

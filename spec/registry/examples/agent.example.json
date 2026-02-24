@@ -1,0 +1,66 @@
+{
+  "registry_schema_version": "1.1.0",
+  "id": "AA-AGT-TRD-LIVECOORD-PRO-030",
+  "type": "agent",
+  "name": "Live Execution Coordinator Agent",
+  "description": "Live execution coordinator with policy checks and circuit breakers.",
+  "version": "1.0.0",
+  "format": "mixed",
+  "files": [
+    {"path": "agent_config.yaml", "type": "yaml", "bytes": 24500},
+    {"path": "live_runbook.md", "type": "markdown", "bytes": 60220},
+    {"path": "guardrails/default_policy.yaml", "type": "yaml", "bytes": 13002},
+    {"path": "tests/smoke-tests.md", "type": "markdown", "bytes": 22014}
+  ],
+  "checksum": "sha256:5c7784329b1a0ef76ac9b3e92b30ea6f",
+  "size_bytes": 119736,
+  "input_schema": "https://agentassets.io/schemas/trade-action-input-v1",
+  "output_schema": "https://agentassets.io/schemas/trade-action-output-v1",
+  "compatibility": ["openai", "anthropic", "langchain"],
+  "dependencies": ["exchange_api", "prediction_market_api", "risk_engine"],
+  "required_secrets": ["EXCHANGE_API_KEY", "EXCHANGE_API_SECRET", "RISK_ENGINE_TOKEN"],
+  "license": {
+    "type": "commercial",
+    "seats": 10,
+    "redistribution_policy": "no_redistribution",
+    "commercial_use": true
+  },
+  "price_usd": 999,
+  "currency": "USD",
+  "billing_type": "one_time",
+  "availability": "draft",
+  "created_at": "2026-02-22T12:00:00Z",
+  "updated_at": "2026-02-22T12:00:00Z",
+  "urls": {
+    "product_page": "https://agentassets.io/products/agent-trading-live-coordinator",
+    "docs": "https://agentassets.io/docs/agent-trading-live-coordinator",
+    "download_endpoint": "https://api.agentassets.io/downloads/AA-AGT-TRD-LIVECOORD-PRO-030",
+    "sample_endpoint": "https://api.agentassets.io/samples/AA-AGT-TRD-LIVECOORD-PRO-030",
+    "changelog": "https://agentassets.io/changelog/AA-AGT-TRD-LIVECOORD-PRO-030"
+  },
+  "tags": ["trading", "live", "execution"],
+  "keywords": ["live trading agent", "execution coordinator agent"],
+  "support": {
+    "level": "priority",
+    "contact": "support@agentassets.io",
+    "sla": "same business day"
+  },
+  "execution_mode": "live",
+  "market_type": "hybrid",
+  "connector_type": ["api", "websocket", "webhook"],
+  "risk_level": "high",
+  "disclosure_required": true,
+  "disclosure_profile": {
+    "disclosure_version": "DISC-1.0.0",
+    "ack_required": true,
+    "display_context": ["product_page", "checkout", "download"]
+  },
+  "risk_profile": {
+    "max_position_size": "1.5% NAV",
+    "max_exposure_pct": 15,
+    "stop_rules": ["position_stop_required", "session_loss_cap"],
+    "circuit_breaker_rules": ["venue_disconnect_pause", "spread_anomaly_pause"]
+  },
+  "trade_action_schema": "https://agentassets.io/schemas/trade-action-v1",
+  "market_data_schema": "https://agentassets.io/schemas/market-data-v1"
+}

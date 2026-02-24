@@ -1,0 +1,69 @@
+{
+  "bundle_id": "AA-BND-MKT-VERTICAL-PRO-045",
+  "slug": "bundle-marketing-vertical",
+  "name": "Marketing Vertical Pack",
+  "version": "1.0.0",
+  "status": "draft",
+  "price_usd": 1299,
+  "compare_at_price": 1842,
+  "execution_mode": "mixed",
+  "market_type": "none",
+  "risk_level": "med",
+  "disclosure_required": false,
+  "contents": [
+    {
+      "product_id": "AA-PRM-MKT-CAMPAIGN-SUITE-003",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Campaign prompts"
+    },
+    {
+      "product_id": "AA-PRM-MKT-COPYTEST-PACK-004",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Copy testing prompts"
+    },
+    {
+      "product_id": "AA-PRM-MKT-SEOCLUSTER-SUITE-005",
+      "quantity": 1,
+      "role": "core",
+      "notes": "SEO prompts"
+    },
+    {
+      "product_id": "AA-SKL-MKT-CONTENTPIPE-PRO-016",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Content workflow skill"
+    },
+    {
+      "product_id": "AA-SKL-MKT-BRIEFSCORING-PRO-017",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "Brief scoring skill"
+    },
+    {
+      "product_id": "AA-AGT-MKT-CONTENTOPS-PRO-024",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Content ops agent"
+    },
+    {
+      "product_id": "AA-AGT-MKT-SEOAUTOPLAN-PRO-025",
+      "quantity": 1,
+      "role": "core",
+      "notes": "SEO planning agent"
+    },
+    {
+      "product_id": "AA-UTL-MKT-OPENAPIWRAPPER-CORE-035",
+      "quantity": 1,
+      "role": "add_on",
+      "notes": "API wrappers"
+    },
+    {
+      "product_id": "AA-DOC-MKT-PLAYBOOK-CORE-041",
+      "quantity": 1,
+      "role": "core",
+      "notes": "Playbook"
+    }
+  ]
+}

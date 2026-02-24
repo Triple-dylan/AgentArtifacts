@@ -1,0 +1,40 @@
+{
+  "product_id": "AA-SKL-MKT-CONTENTPIPE-PRO-016",
+  "slug": "skill-marketing-content-pipeline",
+  "name": "Content Pipeline Skill",
+  "category": "skill",
+  "subcategory": "workflow_skill",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md;json;yaml",
+  "file_count": 11,
+  "included_files": [
+    "SKILL.md",
+    "pipeline_schema.json",
+    "guardrails.yaml"
+  ],
+  "size_estimate": "2.4MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "cursor",
+    "langchain"
+  ],
+  "dependencies": [
+    "cms_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 129,
+    "compare_at_price": 189
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

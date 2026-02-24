@@ -1,0 +1,42 @@
+{
+  "product_id": "AA-AGT-GEN-WORKFLOWORCH-PRO-027",
+  "slug": "agent-workflow-orchestrator",
+  "name": "Workflow Orchestrator Agent",
+  "category": "agent",
+  "subcategory": "workflow_agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "mixed",
+  "file_count": 23,
+  "included_files": [
+    "agent_config.yaml",
+    "tests.md",
+    "deploy.md",
+    "runbooks/"
+  ],
+  "size_estimate": "8.9MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "cursor",
+    "langchain"
+  ],
+  "dependencies": [
+    "scheduler",
+    "queue"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 449,
+    "compare_at_price": 649
+  },
+  "trading": {
+    "execution_mode": "none",
+    "market_type": "none",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}

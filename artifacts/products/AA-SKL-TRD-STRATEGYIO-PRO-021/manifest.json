@@ -1,0 +1,39 @@
+{
+  "product_id": "AA-SKL-TRD-STRATEGYIO-PRO-021",
+  "slug": "skill-trading-strategy-io",
+  "name": "Strategy IO Skill",
+  "category": "skill",
+  "subcategory": "io_schema",
+  "version": "1.0.0",
+  "status": "draft",
+  "release_date": "2026-02-22",
+  "format": "md;json",
+  "file_count": 10,
+  "included_files": [
+    "SKILL.md",
+    "strategy_input_schema.json",
+    "strategy_output_schema.json"
+  ],
+  "size_estimate": "2.4MB",
+  "compatibility": [
+    "openai",
+    "anthropic",
+    "langchain"
+  ],
+  "dependencies": [
+    "market_data_api"
+  ],
+  "license_type": "commercial",
+  "seats": "10",
+  "redistribution_policy": "no_redistribution",
+  "pricing": {
+    "price_usd": 169,
+    "compare_at_price": 249
+  },
+  "trading": {
+    "execution_mode": "research",
+    "market_type": "crypto_perps",
+    "risk_level": "med",
+    "disclosure_required": false
+  }
+}
