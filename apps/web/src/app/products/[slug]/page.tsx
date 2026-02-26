@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { loadCatalog, categoryBadgeClass, riskBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
 
@@ -5,6 +6,30 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   return loadCatalog().map((r) => ({ slug: r.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const row = loadCatalog().find((r) => r.slug === slug);
+  if (!row) return { title: "Product not found" };
+  const url = `https://agentassets.io/products/${slug}`;
+  return {
+    title: row.name,
+    description: row.short_desc,
+    openGraph: {
+      title: row.name,
+      description: row.short_desc,
+      url,
+      type: "website",
+      images: row.cover_image_url ? [{ url: row.cover_image_url, width: 1200, height: 800, alt: row.name }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: row.name,
+      description: row.short_desc,
+      images: row.cover_image_url ? [row.cover_image_url] : [],
+    },
+  };
 }
 
 export default async function ProductDetailPage({ params }: Props) {
@@ -28,8 +53,37 @@ export default async function ProductDetailPage({ params }: Props) {
 
   const related = all.filter((r) => r.category === row.category && r.slug !== row.slug).slice(0, 4);
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": row.name,
+    "description": row.short_desc,
+    "image": row.cover_image_url,
+    "brand": { "@type": "Brand", "name": "Agent Artifacts" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": row.price_usd,
+      "availability": "https://schema.org/InStock",
+      "url": `https://agentassets.io/products/${row.slug}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agentassets.io" },
+      { "@type": "ListItem", "position": 2, "name": "Catalog", "item": "https://agentassets.io/catalog" },
+      { "@type": "ListItem", "position": 3, "name": `${row.category.charAt(0).toUpperCase() + row.category.slice(1)}s`, "item": `https://agentassets.io/catalog?category=${row.category}` },
+      { "@type": "ListItem", "position": 4, "name": row.name },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div style={{ background: "white", borderBottom: "1px solid var(--border)", padding: "1.25rem 0" }}>
         <div className="container">
           <nav style={{ fontSize: "0.82rem", color: "var(--ink-muted)" }}>
@@ -78,9 +132,33 @@ export default async function ProductDetailPage({ params }: Props) {
                 <h2>What&apos;s included</h2>
                 <div className="included-list">
                   <div className="included-item"><span>📄</span><span className="included-item-name">Product manifest (JSON)</span><span className="included-item-role">Metadata</span></div>
-                  <div className="included-item"><span>💬</span><span className="included-item-name">Main prompt file (Markdown)</span><span className="included-item-role">Core</span></div>
-                  <div className="included-item"><span>📋</span><span className="included-item-name">Schema definitions</span><span className="included-item-role">Structure</span></div>
-                  <div className="included-item"><span>📖</span><span className="included-item-name">Integration guide</span><span className="included-item-role">Docs</span></div>
+                  {row.category === "prompt" && <>
+                    <div className="included-item"><span>💬</span><span className="included-item-name">Prompt templates (Markdown)</span><span className="included-item-role">Core</span></div>
+                    <div className="included-item"><span>📋</span><span className="included-item-name">Usage guide &amp; variables reference</span><span className="included-item-role">Docs</span></div>
+                    <div className="included-item"><span>⚡</span><span className="included-item-name">Token optimization notes</span><span className="included-item-role">Tips</span></div>
+                  </>}
+                  {row.category === "skill" && <>
+                    <div className="included-item"><span>⚙️</span><span className="included-item-name">Skill definition file (Markdown)</span><span className="included-item-role">Core</span></div>
+                    <div className="included-item"><span>📋</span><span className="included-item-name">Input/output schema (JSON)</span><span className="included-item-role">Structure</span></div>
+                    <div className="included-item"><span>📖</span><span className="included-item-name">Integration examples</span><span className="included-item-role">Docs</span></div>
+                    <div className="included-item"><span>🔧</span><span className="included-item-name">Parameter reference</span><span className="included-item-role">Reference</span></div>
+                  </>}
+                  {row.category === "agent" && <>
+                    <div className="included-item"><span>🤖</span><span className="included-item-name">Agent manifest &amp; config</span><span className="included-item-role">Core</span></div>
+                    <div className="included-item"><span>🗺️</span><span className="included-item-name">Workflow diagram (Markdown)</span><span className="included-item-role">Design</span></div>
+                    <div className="included-item"><span>📖</span><span className="included-item-name">Setup &amp; deployment guide</span><span className="included-item-role">Docs</span></div>
+                    <div className="included-item"><span>📋</span><span className="included-item-name">API schema (JSON)</span><span className="included-item-role">Structure</span></div>
+                  </>}
+                  {row.category === "utility" && <>
+                    <div className="included-item"><span>🔧</span><span className="included-item-name">JSON schema files</span><span className="included-item-role">Core</span></div>
+                    <div className="included-item"><span>📋</span><span className="included-item-name">Validation examples</span><span className="included-item-role">Examples</span></div>
+                    <div className="included-item"><span>📖</span><span className="included-item-name">Usage documentation</span><span className="included-item-role">Docs</span></div>
+                  </>}
+                  {row.category === "doc" && <>
+                    <div className="included-item"><span>📄</span><span className="included-item-name">Full guide (Markdown)</span><span className="included-item-role">Core</span></div>
+                    <div className="included-item"><span>💡</span><span className="included-item-name">Code samples &amp; examples</span><span className="included-item-role">Examples</span></div>
+                    <div className="included-item"><span>📋</span><span className="included-item-name">Reference index</span><span className="included-item-role">Index</span></div>
+                  </>}
                   {isTrading && <div className="included-item"><span>🛡️</span><span className="included-item-name">Risk policy template</span><span className="included-item-role">Compliance</span></div>}
                 </div>
               </div>

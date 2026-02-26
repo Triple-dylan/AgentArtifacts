@@ -31,7 +31,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="hero">
         <div className="container hero-inner">
-          <div className="hero-eyebrow">✦ 50 launch SKUs · Instant digital delivery</div>
+          <div className="hero-eyebrow">✦ {stats.total} launch SKUs · Instant digital delivery</div>
           <h1>Build faster with production-ready AI prompts, skills, and agents</h1>
           <p className="hero-sub">
             Shop machine-readable prompt packs, Skill MD modules, agents, and utilities with clear licensing and instant digital delivery.
@@ -55,7 +55,7 @@ export default function HomePage() {
               <span className="hero-stat-label">Free samples</span>
             </div>
             <div className="hero-stat">
-              <span className="hero-stat-num">8</span>
+              <span className="hero-stat-num">{bundles.length}</span>
               <span className="hero-stat-label">Bundle packs</span>
             </div>
           </div>

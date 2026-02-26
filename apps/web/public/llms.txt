@@ -1,0 +1,76 @@
+# Agent Artifacts — llms.txt
+# Machine-readable product index for LLM agents and crawlers
+# Site: https://agentassets.io
+# Updated: 2026-02-25
+
+## About
+Agent Artifacts is a digital download store selling production-ready AI prompts, skill modules, agents, utilities, and documentation.
+All products are delivered as Markdown and JSON files with instant digital delivery after Stripe checkout.
+
+## Products
+- [Ideation Prompt Pack](https://agentassets.io/products/prompt-ideation-base) — PROMPT — Now $19 — Fast ideation prompts for agent tasks
+- [System Chain Prompt Suite](https://agentassets.io/products/prompt-system-chain) — PROMPT — Now $29 — Multi-role chain prompts for workflows
+- [Marketing Campaign Prompt Suite](https://agentassets.io/products/prompt-marketing-campaign-suite) — PROMPT — Now $29 — Campaign planning prompts for teams
+- [Copy Testing Prompt Pack](https://agentassets.io/products/prompt-copy-test-pack) — PROMPT — Now $19 — Prompt pack for message and offer testing
+- [SEO Cluster Prompt Suite](https://agentassets.io/products/prompt-seo-cluster-suite) — PROMPT — Now $29 — SEO planning prompts with cluster maps
+- [Ticket Triage Prompt Pack](https://agentassets.io/products/prompt-ticket-triage-pack) — PROMPT — Now $19 — Support ticket routing prompts
+- [Knowledge Base Writing Prompts](https://agentassets.io/products/prompt-kb-write-pack) — PROMPT — Now $19 — Prompts for support article drafting
+- [Agent Handoff Prompt Chain](https://agentassets.io/products/prompt-agent-handoff-chain) — PROMPT — Now $29 — Prompt chain for multi-agent handoffs
+- [Market Thesis Prompt Pack](https://agentassets.io/products/prompt-trading-market-thesis) — PROMPT — Now $29 — Prompts for market hypothesis building
+- [Event Driven Signal Prompt Suite](https://agentassets.io/products/prompt-trading-event-signal) — PROMPT — Now $39 — Prompts for event based signal extraction
+- [Trade Plan Prompt Chain](https://agentassets.io/products/prompt-trading-trade-plan) — PROMPT — Now $39 — Prompt chain for trade plan and execution notes
+- [Risk Journal Prompt Pack](https://agentassets.io/products/prompt-trading-risk-journal) — PROMPT — Now $29 — Prompts for risk review and journaling
+- [Tool Router Skill Module](https://agentassets.io/products/skill-tool-router) — SKILL — Now $89 — Tool call routing skill for agent workflows
+- [IO Validation Skill Module](https://agentassets.io/products/skill-io-validate) — SKILL — Now $99 — Schema driven input and output validation
+- [Error Retry Skill Module](https://agentassets.io/products/skill-error-retry) — SKILL — Now $89 — Retry timeout and fallback patterns
+- [Content Pipeline Skill](https://agentassets.io/products/skill-marketing-content-pipeline) — SKILL — Now $129 — Marketing content workflow skill with scoring
+- [Brief Scoring Skill](https://agentassets.io/products/skill-marketing-brief-scoring) — SKILL — Now $79 — Quality scoring skill for marketing briefs
+- [SLA Automation Skill](https://agentassets.io/products/skill-support-sla-automation) — SKILL — Now $109 — Support SLA timer and breach handling skill
+- [Escalation Flow Skill](https://agentassets.io/products/skill-support-escalation-flow) — SKILL — Now $99 — Escalation logic with guardrails
+- [Trading Data Normalize Skill](https://agentassets.io/products/skill-trading-data-normalize) — SKILL — Now $149 — Normalize market and event data feeds
+- [Strategy IO Skill](https://agentassets.io/products/skill-trading-strategy-io) — SKILL — Now $169 — Structured strategy input and output schemas
+- [Risk Check Skill](https://agentassets.io/products/skill-trading-risk-check) — SKILL — Now $189 — Risk controls for signal and order validation
+- [Execution Adapter Skill](https://agentassets.io/products/skill-trading-execution-adapter) — SKILL — Now $199 — Connector skill for paper and live execution
+- [Content Ops Agent](https://agentassets.io/products/agent-marketing-content-ops) — AGENT — Now $499 — Packaged marketing operations agent
+- [SEO Autoplan Agent](https://agentassets.io/products/agent-marketing-seo-autoplan) — AGENT — Now $399 — Agent for SEO planning and cluster execution
+- [Ticket Autopilot Agent](https://agentassets.io/products/agent-support-ticket-autopilot) — AGENT — Now $499 — Agent for support triage and workflow automation
+- [Workflow Orchestrator Agent](https://agentassets.io/products/agent-workflow-orchestrator) — AGENT — Now $449 — General workflow orchestration agent package
+- [Signal Engine Agent](https://agentassets.io/products/agent-trading-signal-engine) — AGENT — Now $699 — Trading signal generation agent package
+- [Paper Trading Orchestrator Agent](https://agentassets.io/products/agent-trading-paper-orchestrator) — AGENT — Now $799 — Agent for paper trade simulation workflows
+- [Live Execution Coordinator Agent](https://agentassets.io/products/agent-trading-live-coordinator) — AGENT — Now $999 — Agent coordinating live order execution safely
+- [Post Trade Analytics Agent](https://agentassets.io/products/agent-trading-posttrade-analytics) — AGENT — Now $699 — Agent for post-trade analysis and journaling
+- [JSON Schema Pack](https://agentassets.io/products/utility-json-schema-pack) — UTILITY — Now $79 — Reusable schema pack for agent outputs
+- [Guardrails YAML Kit](https://agentassets.io/products/utility-guardrails-yaml) — UTILITY — Now $89 — Guardrail policies and safety templates
+- [Memory Template Library](https://agentassets.io/products/utility-memory-templates) — UTILITY — Now $69 — Memory templates for context persistence
+- [Marketing OpenAPI Wrapper Pack](https://agentassets.io/products/utility-marketing-openapi-wrapper) — UTILITY — Now $99 — OpenAPI wrapper templates for marketing APIs
+- [Support Policy Template Kit](https://agentassets.io/products/utility-support-policy-templates) — UTILITY — Now $89 — Policy templates for support workflows
+- [Market Schema Pack](https://agentassets.io/products/utility-trading-market-schemas) — UTILITY — Now $129 — Prediction and trading market schema library
+- [Trading Risk Policy Kit](https://agentassets.io/products/utility-trading-risk-policy-kit) — UTILITY — Now $149 — Risk policy templates for paper and live execution
+- [Agent Cookbook](https://agentassets.io/products/doc-agent-cookbook) — DOC — Now $49 — Implementation recipes for agent builders
+- [Compatibility Guide](https://agentassets.io/products/doc-compatibility-guide) — DOC — Now $39 — Cross platform compatibility reference guide
+- [Marketing Agent Playbook](https://agentassets.io/products/doc-marketing-playbook) — DOC — Now $69 — Best practices for marketing automation assets
+- [Support Ops Agent Playbook](https://agentassets.io/products/doc-support-playbook) — DOC — Now $69 — Best practices for support automation assets
+
+## Bundles
+- [Starter Bundle](https://agentassets.io/bundles/bundle-starter) — BUNDLE — Now $249 — Entry bundle for first-time builders
+- [Agent Builder Kit](https://agentassets.io/bundles/bundle-agent-builder-kit) — BUNDLE — Now $999 — Core build kit for agent engineers
+- [Marketing Vertical Pack](https://agentassets.io/bundles/bundle-marketing-vertical) — BUNDLE — Now $1,299 — Marketing focused bundle for campaign systems
+- [Support Ops Vertical Pack](https://agentassets.io/bundles/bundle-support-vertical) — BUNDLE — Now $1,299 — Support focused bundle for service workflows
+- [Prediction Market Starter Pack](https://agentassets.io/bundles/bundle-prediction-market-starter) — BUNDLE — Now $1,499 — Starter bundle for prediction market workflows
+- [Trading Systems Kit](https://agentassets.io/bundles/bundle-trading-systems-kit) — BUNDLE — Now $2,499 — Pro bundle for signal to execution workflows
+- [Pro Suite](https://agentassets.io/bundles/bundle-pro-suite) — BUNDLE — Now $2,999 — Comprehensive bundle across all core lines
+- [Enterprise Kit](https://agentassets.io/bundles/bundle-enterprise-kit) — BUNDLE — Now $5,000 — Custom enterprise package with support and licensing
+
+## Categories
+- prompt: Ready-to-use prompt packs and chains
+- skill: Skill modules with schemas and error handling
+- agent: Full packaged agents with configs and docs
+- utility: JSON schemas, guardrails, and templates
+- doc: Playbooks, cookbooks, and compatibility guides
+- bundle: Curated product bundles at discounted prices
+
+## Licensing
+All products are licensed for commercial single-seat use. Redistribution and resale of raw files is not permitted.
+
+## Contact
+support@agentassets.io

@@ -52,17 +52,21 @@ export default function FreeLibraryPage() {
                   </div>
                   <div className="product-card-name">{row.name}</div>
                   <div className="product-card-desc">{row.short_desc}</div>
-                  <div className="product-card-footer">
-                    <div>
+                  <div className="product-card-footer" style={{ flexDirection: "column", gap: "0.6rem", alignItems: "stretch" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                       <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#1a6b50" }}>Free preview</div>
-                      <div style={{ fontSize: "0.75rem", color: "var(--ink-subtle)" }}>Full version: {row.price_label}</div>
+                      <div style={{ display: "flex", gap: "0.4rem" }}>
+                        {row.sample_link && (
+                          <a href={row.sample_link} className="btn btn-green-outline btn-sm" target="_blank" rel="noopener noreferrer">Preview</a>
+                        )}
+                        <Link href={`/products/${row.slug}`} className="btn btn-outline btn-sm">Details</Link>
+                      </div>
                     </div>
-                    <div style={{ display: "flex", gap: "0.4rem" }}>
-                      {row.sample_link && (
-                        <a href={row.sample_link} className="btn btn-green-outline btn-sm" target="_blank" rel="noopener noreferrer">Preview</a>
-                      )}
-                      <Link href={`/products/${row.slug}`} className="btn btn-outline btn-sm">Details</Link>
-                    </div>
+                    {row.checkout_url && (
+                      <a href={row.checkout_url} className="btn btn-buy btn-sm" style={{ justifyContent: "center", fontSize: "0.82rem" }} target="_blank" rel="noopener noreferrer">
+                        Buy full version — {row.price_label}
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

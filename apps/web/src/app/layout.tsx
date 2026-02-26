@@ -6,6 +6,20 @@ export const metadata: Metadata = {
   title: { default: "Agent Artifacts — AI Prompts, Skills & Agents", template: "%s | Agent Artifacts" },
   description: "Production-ready AI prompts, skill modules, agents, and utilities with clear licensing and instant digital delivery.",
   metadataBase: new URL("https://agentassets.io"),
+  openGraph: {
+    type: "website",
+    siteName: "Agent Artifacts",
+    title: "Agent Artifacts — AI Prompts, Skills & Agents",
+    description: "Production-ready AI prompts, skill modules, agents, and utilities with clear licensing and instant digital delivery.",
+    url: "https://agentassets.io",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Agent Artifacts" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Agent Artifacts — AI Prompts, Skills & Agents",
+    description: "Production-ready AI prompts, skill modules, agents, and utilities with clear licensing and instant digital delivery.",
+    images: ["/og-image.png"],
+  },
 };
 
 const navLinks = [
@@ -40,6 +54,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </nav>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Agent Artifacts",
+            "url": "https://agentassets.io",
+            "logo": "https://agentassets.io/og-image.png",
+            "description": "Production-ready AI prompts, skill modules, agents, and utilities with clear licensing and instant digital delivery.",
+            "contactPoint": { "@type": "ContactPoint", "contactType": "customer service", "email": "support@agentassets.io" },
+          }) }}
+        />
 
         <div className="page-wrap">
           {children}

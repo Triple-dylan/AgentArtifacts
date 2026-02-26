@@ -1,0 +1,8 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0f1a14"/>
+  <rect x="0" y="0" width="6" height="630" fill="#2dd4a0"/>
+  <text x="80" y="240" font-family="system-ui,sans-serif" font-size="72" font-weight="800" fill="white">Agent</text>
+  <text x="80" y="320" font-family="system-ui,sans-serif" font-size="72" font-weight="800" fill="#2dd4a0">Artifacts</text>
+  <text x="80" y="400" font-family="system-ui,sans-serif" font-size="28" fill="rgba(255,255,255,0.65)">Production-ready AI prompts, skills &amp; agents</text>
+  <text x="80" y="450" font-family="system-ui,sans-serif" font-size="22" fill="rgba(255,255,255,0.4)">agentassets.io</text>
+</svg>

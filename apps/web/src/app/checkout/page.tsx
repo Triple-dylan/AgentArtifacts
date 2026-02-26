@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { loadCatalog, loadBundles } from "@/lib/catalog";
+import CheckoutForm from "./CheckoutForm";
 
 type Props = { searchParams: Promise<{ product_id?: string; bundle_id?: string; canceled?: string }> };
 
@@ -45,7 +46,7 @@ export default async function CheckoutPage({ searchParams }: Props) {
   const priceLabel = item.price_label;
   const compareLabel = item.compare_at_label;
   const savingsLabel = item.savings_label;
-  const checkoutUrl = item.checkout_url;
+  const checkoutUrl = item.checkout_url || null;
   const needsDisclosure = item.disclosure_required === "Y";
   const disclosureText = item.disclosure_text_short;
 
@@ -85,40 +86,13 @@ export default async function CheckoutPage({ searchParams }: Props) {
             )}
           </div>
 
-          {/* Disclosure */}
-          {needsDisclosure && (
-            <div className="disclosure-panel" style={{ marginBottom: "1.25rem" }}>
-              <div className="disclosure-panel-header">⚠️ Risk disclosure required</div>
-              <p style={{ marginBottom: "0.75rem" }}>{disclosureText || "This asset includes trading tooling. Research outputs are informational and require independent judgment. Not investment advice."}</p>
-              <label style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem", cursor: "pointer", fontSize: "0.82rem", color: "#7a3530" }}>
-                <input type="checkbox" style={{ marginTop: "0.2rem", flexShrink: 0 }} />
-                <span>I acknowledge the disclosure and understand this is tooling and education, not investment advice.</span>
-              </label>
-            </div>
-          )}
-
-          {/* License ack */}
-          <div className="content-block" style={{ marginBottom: "1.25rem" }}>
-            <h2>License acknowledgement</h2>
-            <p style={{ fontSize: "0.85rem", marginBottom: "0.75rem" }}>By completing this purchase you agree to the license terms: commercial single-seat use, no redistribution, no resale of raw files.</p>
-            <label style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem", cursor: "pointer", fontSize: "0.85rem", color: "var(--ink-muted)" }}>
-              <input type="checkbox" style={{ marginTop: "0.2rem", flexShrink: 0 }} />
-              <span>I have read and agree to the <Link href="/pricing#license" style={{ color: "var(--green)" }}>license terms</Link>.</span>
-            </label>
-          </div>
-
-          {/* CTA */}
-          {checkoutUrl ? (
-            <a href={checkoutUrl} className="btn btn-buy btn-lg" style={{ justifyContent: "center", fontSize: "1rem" }} target="_blank" rel="noopener noreferrer">
-              Continue to payment — {priceLabel} →
-            </a>
-          ) : (
-            <div className="btn btn-buy btn-lg" style={{ justifyContent: "center", background: "var(--ink-subtle)", cursor: "default" }}>Payment link coming soon</div>
-          )}
-
-          <p style={{ fontSize: "0.78rem", color: "var(--ink-subtle)", textAlign: "center", marginTop: "0.85rem" }}>
-            Secured by Stripe · No card data stored on our servers
-          </p>
+          {/* Client form component handles checkbox validation and Stripe redirect */}
+          <CheckoutForm
+            checkoutUrl={checkoutUrl}
+            priceLabel={priceLabel}
+            needsDisclosure={needsDisclosure}
+            disclosureText={disclosureText}
+          />
         </div>
       </div>
     </>

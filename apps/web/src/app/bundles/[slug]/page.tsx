@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { loadBundles, loadCatalog, riskBadgeClass, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
 
@@ -5,6 +6,30 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   return loadBundles().map((b) => ({ slug: b.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const bundle = loadBundles().find((b) => b.slug === slug);
+  if (!bundle) return { title: "Bundle not found" };
+  const url = `https://agentassets.io/bundles/${slug}`;
+  return {
+    title: bundle.name,
+    description: bundle.short_desc,
+    openGraph: {
+      title: bundle.name,
+      description: bundle.short_desc,
+      url,
+      type: "website",
+      images: bundle.cover_image_url ? [{ url: bundle.cover_image_url, width: 1200, height: 800, alt: bundle.name }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: bundle.name,
+      description: bundle.short_desc,
+      images: bundle.cover_image_url ? [bundle.cover_image_url] : [],
+    },
+  };
 }
 
 function parseIncluded(str: string): { id: string; role: string }[] {
@@ -39,8 +64,36 @@ export default async function BundleDetailPage({ params }: Props) {
   const otherBundles = bundles.filter((b) => b.slug !== slug).slice(0, 3);
   const needsDisclosure = bundle.disclosure_required === "Y";
 
+  const bundleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": bundle.name,
+    "description": bundle.short_desc,
+    "image": bundle.cover_image_url,
+    "brand": { "@type": "Brand", "name": "Agent Artifacts" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": bundle.price_usd,
+      "availability": "https://schema.org/InStock",
+      "url": `https://agentassets.io/bundles/${bundle.slug}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agentassets.io" },
+      { "@type": "ListItem", "position": 2, "name": "Bundles", "item": "https://agentassets.io/catalog?type=bundle" },
+      { "@type": "ListItem", "position": 3, "name": bundle.name },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bundleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div style={{ background: "white", borderBottom: "1px solid var(--border)", padding: "1.25rem 0" }}>
         <div className="container">
           <nav style={{ fontSize: "0.82rem", color: "var(--ink-muted)" }}>

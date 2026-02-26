@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { loadCatalog, loadBundles, categoryBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
+import { loadCatalog, loadBundles, categoryBadgeClass, modeBadgeClass, riskBadgeClass, categoryLabel } from "@/lib/catalog";
 
 type Props = { searchParams: Promise<Record<string, string>> };
 
@@ -50,9 +50,9 @@ export default async function CatalogPage({ searchParams }: Props) {
             <div className="filter-bar">
               <div className="filter-group">
                 <span className="filter-label">Category:</span>
-                <Link href="/catalog" className={`filter-chip ${!category ? "active" : ""}`}>All</Link>
+                <Link href={`/catalog${compat ? `?compat=${compat}` : ""}${mode ? `${compat ? "&" : "?"}mode=${mode}` : ""}`} className={`filter-chip ${!category ? "active" : ""}`}>All</Link>
                 {CATEGORIES.map((c) => (
-                  <Link key={c} href={`/catalog?category=${c}`} className={`filter-chip ${category === c ? "active" : ""}`} style={{ textTransform: "capitalize" }}>
+                  <Link key={c} href={`/catalog?category=${c}${compat ? `&compat=${compat}` : ""}${mode ? `&mode=${mode}` : ""}`} className={`filter-chip ${category === c ? "active" : ""}`} style={{ textTransform: "capitalize" }}>
                     {c}s
                   </Link>
                 ))}
@@ -60,9 +60,9 @@ export default async function CatalogPage({ searchParams }: Props) {
               <div className="filter-divider" />
               <div className="filter-group">
                 <span className="filter-label">Compatible:</span>
-                <Link href="/catalog" className={`filter-chip ${!compat ? "active" : ""}`}>Any</Link>
+                <Link href={`/catalog${category ? `?category=${category}` : ""}${mode ? `${category ? "&" : "?"}mode=${mode}` : ""}`} className={`filter-chip ${!compat ? "active" : ""}`}>Any</Link>
                 {COMPAT.map((c) => (
-                  <Link key={c} href={`/catalog?compat=${c}${category ? `&category=${category}` : ""}`} className={`filter-chip ${compat === c ? "active" : ""}`} style={{ textTransform: "capitalize" }}>
+                  <Link key={c} href={`/catalog?compat=${c}${category ? `&category=${category}` : ""}${mode ? `&mode=${mode}` : ""}`} className={`filter-chip ${compat === c ? "active" : ""}`} style={{ textTransform: "capitalize" }}>
                     {c === "langchain" ? "LangChain" : c.charAt(0).toUpperCase() + c.slice(1)}
                   </Link>
                 ))}
@@ -70,9 +70,10 @@ export default async function CatalogPage({ searchParams }: Props) {
               <div className="filter-divider" />
               <div className="filter-group">
                 <span className="filter-label">Mode:</span>
-                {EXEC_MODES.map((m) => (
-                  <Link key={m} href={`/catalog?mode=${m}${category ? `&category=${category}` : ""}`} className={`filter-chip ${mode === m ? "active" : ""}`} style={{ textTransform: "capitalize" }}>
-                    {m === "none" ? "General" : m}
+                <Link href={`/catalog${category ? `?category=${category}` : ""}${compat ? `${category ? "&" : "?"}compat=${compat}` : ""}`} className={`filter-chip ${!mode ? "active" : ""}`}>All</Link>
+                {EXEC_MODES.filter((m) => m !== "none").map((m) => (
+                  <Link key={m} href={`/catalog?mode=${m}${category ? `&category=${category}` : ""}${compat ? `&compat=${compat}` : ""}`} className={`filter-chip ${mode === m ? "active" : ""}`} style={{ textTransform: "capitalize" }}>
+                    {m}
                   </Link>
                 ))}
               </div>
@@ -120,7 +121,7 @@ export default async function CatalogPage({ searchParams }: Props) {
                       {row.execution_mode && row.execution_mode !== "none" && (
                         <span className={`badge ${modeBadgeClass(row.execution_mode)}`}>{row.execution_mode}</span>
                       )}
-                      {row.risk_level === "high" && <span className="badge badge-risk-high">High risk</span>}
+                      {row.risk_level && row.risk_level !== "low" && <span className={`badge ${riskBadgeClass(row.risk_level)}`}>{row.risk_level} risk</span>}
                       {row.lead_magnet === "Y" && <span className="badge badge-plain">Free sample</span>}
                     </div>
                     <div className="product-card-name">{row.name}</div>

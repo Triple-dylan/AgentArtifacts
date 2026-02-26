@@ -43,29 +43,26 @@ export default async function SuccessPage({ searchParams }: Props) {
 
           {/* Download */}
           <div className="content-block" style={{ background: "var(--green-light)", borderColor: "rgba(26,107,80,0.2)" }}>
-            <h2 style={{ color: "var(--green)" }}>📦 Your downloads</h2>
+            <h2 style={{ color: "var(--green)" }}>📦 Your download is on its way</h2>
             <p style={{ fontSize: "0.875rem", marginBottom: "1rem", color: "var(--ink-muted)" }}>
-              Download links are secured and will expire after 24 hours. Files are also accessible from your account page at any time.
+              A confirmation email with your secure download link has been sent to your Stripe receipt email address. Downloads are also accessible from your account page.
             </p>
-            <div className="included-list">
-              <div className="included-item">
-                <span>📄</span>
-                <span className="included-item-name">Product manifest (JSON)</span>
-                <span className="btn btn-green-outline btn-sm" style={{ marginLeft: "auto" }}>Download</span>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.65rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.65rem", fontSize: "0.875rem", color: "var(--ink)" }}>
+                <span style={{ color: "var(--green)", fontSize: "1.1rem" }}>✓</span>
+                <span>Receipt and download link sent to your email</span>
               </div>
-              <div className="included-item">
-                <span>💬</span>
-                <span className="included-item-name">Main product files (MD + JSON)</span>
-                <span className="btn btn-green-outline btn-sm" style={{ marginLeft: "auto" }}>Download</span>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.65rem", fontSize: "0.875rem", color: "var(--ink)" }}>
+                <span style={{ color: "var(--green)", fontSize: "1.1rem" }}>✓</span>
+                <span>Files include manifest, prompt/skill/agent files, and integration guide</span>
               </div>
-              <div className="included-item">
-                <span>📖</span>
-                <span className="included-item-name">Integration guide</span>
-                <span className="btn btn-green-outline btn-sm" style={{ marginLeft: "auto" }}>Download</span>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.65rem", fontSize: "0.875rem", color: "var(--ink)" }}>
+                <span style={{ color: "var(--green)", fontSize: "1.1rem" }}>✓</span>
+                <span>Download link valid for 7 days — re-download any time from your account</span>
               </div>
             </div>
             <div style={{ marginTop: "1rem", padding: "0.75rem", background: "rgba(255,255,255,0.6)", borderRadius: "8px", fontSize: "0.8rem", color: "#1a6b50" }}>
-              💡 Tip: Files are also saved to your <Link href="/account" style={{ fontWeight: 700, textDecoration: "underline" }}>account page</Link> for future re-download.
+              💡 Didn&apos;t get the email? Check your spam folder or visit your <Link href="/account" style={{ fontWeight: 700, textDecoration: "underline" }}>account page</Link>.
             </div>
           </div>
 
