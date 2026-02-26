@@ -392,10 +392,10 @@ p  { color: var(--ink-muted); line-height: 1.65; }
   box-shadow: var(--shadow-xs);
 }
 .bundle-card:hover { border-color: rgba(5,150,105,0.25); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-.bundle-card-img    { width: 100%; height: 170px; object-fit: cover; display: block; background: #0f1a2e; }
+.bundle-card-img    { width: 100%; height: 160px; object-fit: cover; display: block; background: #0f1a2e; }
 .bundle-card-body   { padding: 1.35rem; flex: 1; display: flex; flex-direction: column; }
-.bundle-card-name   { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--ink); }
-.bundle-card-desc   { font-size: 0.84rem; color: var(--ink-muted); margin-bottom: 1rem; line-height: 1.55; flex: 1; }
+.bundle-card-name   { font-size: 0.93rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--ink); }
+.bundle-card-desc   { font-size: 0.81rem; color: var(--ink-muted); margin-bottom: 1rem; line-height: 1.55; flex: 1; }
 .bundle-card-footer { border-top: 1px solid var(--border); padding-top: 0.9rem; display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
 
 /* ─── FILTER BAR ─────────────────────────────────────── */

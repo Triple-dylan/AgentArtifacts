@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { loadCatalog, loadBundles, catalogStats, categoryBadgeClass, riskBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
+import { loadCatalog, loadBundles, catalogStats, categoryBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
 
 const FAQ = [
   { q: "What do I get after purchase?", a: "Digital files (Markdown, JSON, YAML) delivered instantly via the download page — including manifests and all docs listed on the product page." },
@@ -31,12 +31,12 @@ export default function HomePage() {
     "@type": "ItemList",
     "name": "Agent Artifacts — AI Prompts, Skills & Agents",
     "description": "Production-ready AI prompts, skill modules, agents, utilities, and docs for AI builders.",
-    "url": "https://agentassets.io/catalog",
+    "url": "https://agentartifacts.io/catalog",
     "numberOfItems": stats.total,
     "itemListElement": rows.slice(0, 50).map((r, i) => ({
       "@type": "ListItem",
       "position": i + 1,
-      "url": `https://agentassets.io/products/${r.slug}`,
+      "url": `https://agentartifacts.io/products/${r.slug}`,
       "name": r.name,
     })),
   };
@@ -136,9 +136,6 @@ export default function HomePage() {
                     {row.execution_mode && row.execution_mode !== "none" && (
                       <span className={`badge ${modeBadgeClass(row.execution_mode)}`}>{row.execution_mode}</span>
                     )}
-                    {row.risk_level && row.risk_level !== "low" && (
-                      <span className={`badge ${riskBadgeClass(row.risk_level)}`}>{row.risk_level} risk</span>
-                    )}
                   </div>
                   <div className="product-card-name">{row.name}</div>
                   <div className="product-card-desc">{row.short_desc}</div>
@@ -174,7 +171,6 @@ export default function HomePage() {
                 <div className="bundle-card-body">
                   <div className="product-card-badges" style={{ marginBottom: "0.5rem" }}>
                     <span className="badge badge-bundle">Bundle</span>
-                    {b.disclosure_required === "Y" && <span className="badge badge-risk-high">Disclosure required</span>}
                     <span className="badge badge-plain">{b.product_count} items</span>
                   </div>
                   <div className="bundle-card-name">{b.name}</div>

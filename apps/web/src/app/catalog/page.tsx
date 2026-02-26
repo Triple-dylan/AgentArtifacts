@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { loadCatalog, loadBundles, categoryBadgeClass, modeBadgeClass, riskBadgeClass, categoryLabel } from "@/lib/catalog";
+import { loadCatalog, loadBundles, categoryBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
 
 type Props = { searchParams: Promise<Record<string, string>> };
 
@@ -88,11 +88,7 @@ export default async function CatalogPage({ searchParams }: Props) {
                   <div className="bundle-card-body">
                     <div className="product-card-badges" style={{ marginBottom: "0.5rem" }}>
                       <span className="badge badge-bundle">Bundle</span>
-                      {b.disclosure_required === "Y" && <span className="badge badge-risk-high">Disclosure required</span>}
                       <span className="badge badge-plain">{b.product_count} items</span>
-                      {b.market_type && b.market_type !== "none" && (
-                        <span className="badge badge-mode-research">{b.market_type}</span>
-                      )}
                     </div>
                     <div className="bundle-card-name">{b.name}</div>
                     <div className="bundle-card-desc">{b.short_desc}</div>
@@ -121,7 +117,6 @@ export default async function CatalogPage({ searchParams }: Props) {
                       {row.execution_mode && row.execution_mode !== "none" && (
                         <span className={`badge ${modeBadgeClass(row.execution_mode)}`}>{row.execution_mode}</span>
                       )}
-                      {row.risk_level && row.risk_level !== "low" && <span className={`badge ${riskBadgeClass(row.risk_level)}`}>{row.risk_level} risk</span>}
                       {row.lead_magnet === "Y" && <span className="badge badge-plain">Free sample</span>}
                     </div>
                     <div className="product-card-name">{row.name}</div>

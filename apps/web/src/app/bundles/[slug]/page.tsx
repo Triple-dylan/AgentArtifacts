@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { loadBundles, loadCatalog, riskBadgeClass, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
+import { loadBundles, loadCatalog, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const bundle = loadBundles().find((b) => b.slug === slug);
   if (!bundle) return { title: "Bundle not found" };
-  const url = `https://agentassets.io/bundles/${slug}`;
+  const url = `https://agentartifacts.io/bundles/${slug}`;
   return {
     title: bundle.name,
     description: bundle.short_desc,
@@ -76,7 +76,7 @@ export default async function BundleDetailPage({ params }: Props) {
       "priceCurrency": "USD",
       "price": bundle.price_usd,
       "availability": "https://schema.org/InStock",
-      "url": `https://agentassets.io/bundles/${bundle.slug}`,
+      "url": `https://agentartifacts.io/bundles/${bundle.slug}`,
     },
   };
 
@@ -84,8 +84,8 @@ export default async function BundleDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agentassets.io" },
-      { "@type": "ListItem", "position": 2, "name": "Bundles", "item": "https://agentassets.io/catalog?type=bundle" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agentartifacts.io" },
+      { "@type": "ListItem", "position": 2, "name": "Bundles", "item": "https://agentartifacts.io/catalog?type=bundle" },
       { "@type": "ListItem", "position": 3, "name": bundle.name },
     ],
   };
@@ -111,8 +111,6 @@ export default async function BundleDetailPage({ params }: Props) {
                   <div className="product-card-badges" style={{ marginBottom: "0.75rem" }}>
                     <span className="badge badge-bundle">Bundle</span>
                     <span className="badge badge-plain">{bundle.product_count} products</span>
-                    {needsDisclosure && <span className="badge badge-risk-high">Disclosure required</span>}
-                    {bundle.market_type && bundle.market_type !== "none" && <span className="badge badge-mode-research">{bundle.market_type}</span>}
                   </div>
                   <h1 style={{ marginBottom: "0.65rem", fontSize: "1.65rem" }}>{bundle.name}</h1>
                   <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: "1.65" }}>{bundle.short_desc}</p>
@@ -121,7 +119,7 @@ export default async function BundleDetailPage({ params }: Props) {
 
               {needsDisclosure && (
                 <div className="disclosure-panel">
-                  <div className="disclosure-panel-header">⚠️ Trading Risk Disclosure Required</div>
+                  <div className="disclosure-panel-header">⚠️ Important Disclosure</div>
                   <p>{bundle.disclosure_text_short || "Research outputs are informational and require independent judgment. Not investment advice."}</p>
                 </div>
               )}
@@ -189,14 +187,8 @@ export default async function BundleDetailPage({ params }: Props) {
                   <div className="sidebar-meta-row"><span className="sidebar-meta-key">Products included</span><span className="sidebar-meta-val">{bundle.product_count}</span></div>
                   {bundle.execution_mode && bundle.execution_mode !== "none" && <div className="sidebar-meta-row"><span className="sidebar-meta-key">Execution mode</span><span className="sidebar-meta-val" style={{ textTransform: "capitalize" }}>{bundle.execution_mode}</span></div>}
                   {bundle.market_type && bundle.market_type !== "none" && <div className="sidebar-meta-row"><span className="sidebar-meta-key">Market type</span><span className="sidebar-meta-val" style={{ textTransform: "capitalize" }}>{bundle.market_type}</span></div>}
-                  <div className="sidebar-meta-row"><span className="sidebar-meta-key">Risk level</span><span className={`badge ${riskBadgeClass(bundle.risk_level)}`} style={{ fontSize: "0.78rem" }}>{bundle.risk_level}</span></div>
                   <div className="sidebar-meta-row"><span className="sidebar-meta-key">Delivery</span><span className="sidebar-meta-val">Instant</span></div>
                 </div>
-                {needsDisclosure && (
-                  <div style={{ background: "var(--red-light)", border: "1px solid rgba(184,74,63,0.2)", borderRadius: "8px", padding: "0.75rem", marginBottom: "0.85rem", fontSize: "0.8rem", color: "#7a3530" }}>
-                    ⚠️ Disclosure acknowledgement required before download
-                  </div>
-                )}
                 {bundle.checkout_url ? (
                   <a href={bundle.checkout_url} className="btn btn-buy" target="_blank" rel="noopener noreferrer">
                     {bundle.cta_label || "Buy Bundle"} — {bundle.price_label}

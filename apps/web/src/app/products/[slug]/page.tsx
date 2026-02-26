@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { loadCatalog, categoryBadgeClass, riskBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
+import { loadCatalog, categoryBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const row = loadCatalog().find((r) => r.slug === slug);
   if (!row) return { title: "Product not found" };
-  const url = `https://agentassets.io/products/${slug}`;
+  const url = `https://agentartifacts.io/products/${slug}`;
   return {
     title: row.name,
     description: row.short_desc,
@@ -65,7 +65,7 @@ export default async function ProductDetailPage({ params }: Props) {
       "priceCurrency": "USD",
       "price": row.price_usd,
       "availability": "https://schema.org/InStock",
-      "url": `https://agentassets.io/products/${row.slug}`,
+      "url": `https://agentartifacts.io/products/${row.slug}`,
     },
   };
 
@@ -73,9 +73,9 @@ export default async function ProductDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agentassets.io" },
-      { "@type": "ListItem", "position": 2, "name": "Catalog", "item": "https://agentassets.io/catalog" },
-      { "@type": "ListItem", "position": 3, "name": `${row.category.charAt(0).toUpperCase() + row.category.slice(1)}s`, "item": `https://agentassets.io/catalog?category=${row.category}` },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agentartifacts.io" },
+      { "@type": "ListItem", "position": 2, "name": "Catalog", "item": "https://agentartifacts.io/catalog" },
+      { "@type": "ListItem", "position": 3, "name": `${row.category.charAt(0).toUpperCase() + row.category.slice(1)}s`, "item": `https://agentartifacts.io/catalog?category=${row.category}` },
       { "@type": "ListItem", "position": 4, "name": row.name },
     ],
   };
@@ -102,7 +102,6 @@ export default async function ProductDetailPage({ params }: Props) {
                   <div className="product-card-badges" style={{ marginBottom: "0.75rem" }}>
                     <span className={`badge ${categoryBadgeClass(row.category)}`}>{categoryLabel(row.category)}</span>
                     {isTrading && <span className={`badge ${modeBadgeClass(row.execution_mode)}`}>{row.execution_mode}</span>}
-                    {row.risk_level && <span className={`badge ${riskBadgeClass(row.risk_level)}`}>{row.risk_level} risk</span>}
                     {row.lead_magnet === "Y" && <span className="badge badge-plain">Free sample available</span>}
                     <span className="badge badge-plain" style={{ textTransform: "uppercase", letterSpacing: "0.03em" }}>#{row.product_id.split("-").pop()}</span>
                   </div>
@@ -113,7 +112,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
               {needsDisclosure && (
                 <div className="disclosure-panel">
-                  <div className="disclosure-panel-header">⚠️ Trading Risk Disclosure Required</div>
+                  <div className="disclosure-panel-header">⚠️ Important Disclosure</div>
                   <p>{row.disclosure_text_short || "This asset is tooling and education only — not investment advice."}</p>
                 </div>
               )}
@@ -216,14 +215,8 @@ export default async function ProductDetailPage({ params }: Props) {
                       <div className="sidebar-meta-row"><span className="sidebar-meta-key">Market type</span><span className="sidebar-meta-val" style={{ textTransform: "capitalize" }}>{row.market_type}</span></div>
                     </>
                   )}
-                  <div className="sidebar-meta-row"><span className="sidebar-meta-key">Risk level</span><span className={`badge ${riskBadgeClass(row.risk_level)}`} style={{ fontSize: "0.78rem" }}>{row.risk_level}</span></div>
                   <div className="sidebar-meta-row"><span className="sidebar-meta-key">Delivery</span><span className="sidebar-meta-val">Instant</span></div>
                 </div>
-                {needsDisclosure && (
-                  <div style={{ background: "var(--red-light)", border: "1px solid rgba(184,74,63,0.2)", borderRadius: "8px", padding: "0.75rem", marginBottom: "0.85rem", fontSize: "0.8rem", color: "#7a3530" }}>
-                    ⚠️ Disclosure acknowledgement required before download
-                  </div>
-                )}
                 {row.checkout_url ? (
                   <a href={row.checkout_url} className="btn btn-buy" target="_blank" rel="noopener noreferrer">
                     {row.cta_label || "Buy Now"} — {row.price_label}
