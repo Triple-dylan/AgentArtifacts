@@ -91,21 +91,20 @@ function parseCsv<T>(text: string): T[] {
   });
 }
 
-function findMonoRoot(): string {
-  // Walk up from cwd to find the framer-import directory
-  let dir = process.cwd();
-  for (let i = 0; i < 5; i++) {
-    if (fs.existsSync(path.join(dir, "framer-import"))) return dir;
-    dir = path.dirname(dir);
-  }
-  throw new Error("Could not locate monorepo root (framer-import not found)");
+function dataDir(): string {
+  // In Vercel (root = apps/web) and locally (cwd = apps/web), data/ is at cwd.
+  // If running from monorepo root locally, fall back to apps/web/data.
+  const direct = path.join(process.cwd(), "data");
+  if (fs.existsSync(direct)) return direct;
+  const fromRoot = path.join(process.cwd(), "apps", "web", "data");
+  if (fs.existsSync(fromRoot)) return fromRoot;
+  throw new Error("Could not locate data directory");
 }
 
 let _catalog: CatalogRow[] | null = null;
 export function loadCatalog(): CatalogRow[] {
   if (_catalog) return _catalog;
-  const root = findMonoRoot();
-  const raw = fs.readFileSync(path.join(root, "framer-import", "products.collection.csv"), "utf8");
+  const raw = fs.readFileSync(path.join(dataDir(), "products.collection.csv"), "utf8");
   _catalog = parseCsv<CatalogRow>(raw);
   return _catalog;
 }
@@ -113,8 +112,7 @@ export function loadCatalog(): CatalogRow[] {
 let _bundles: BundleRow[] | null = null;
 export function loadBundles(): BundleRow[] {
   if (_bundles) return _bundles;
-  const root = findMonoRoot();
-  const raw = fs.readFileSync(path.join(root, "framer-import", "bundles.collection.csv"), "utf8");
+  const raw = fs.readFileSync(path.join(dataDir(), "bundles.collection.csv"), "utf8");
   _bundles = parseCsv<BundleRow>(raw);
   return _bundles;
 }
