@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import PromoPopup from "@/components/PromoPopup";
 
 export const metadata: Metadata = {
   title: { default: "Agent Artifacts — AI Prompts, Skills & Agents", template: "%s | Agent Artifacts" },
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }) }}
         />
 
+        <PromoPopup />
         <div className="page-wrap">
           {children}
         </div>
