@@ -10,3 +10,4 @@ spec/registry/generated/
 .DS_Store
 tmp_test_write.txt
 stripe_backup_code.txt
+stripe_new_links.csv
