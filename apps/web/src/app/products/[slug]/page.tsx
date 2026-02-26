@@ -158,7 +158,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     <div className="included-item"><span>💡</span><span className="included-item-name">Code samples &amp; examples</span><span className="included-item-role">Examples</span></div>
                     <div className="included-item"><span>📋</span><span className="included-item-name">Reference index</span><span className="included-item-role">Index</span></div>
                   </>}
-                  {isTrading && <div className="included-item"><span>🛡️</span><span className="included-item-name">Risk policy template</span><span className="included-item-role">Compliance</span></div>}
+                  {isTrading && <div className="included-item"><span>🛡️</span><span className="included-item-name">Compliance policy template</span><span className="included-item-role">Compliance</span></div>}
                 </div>
               </div>
 

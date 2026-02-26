@@ -22,7 +22,7 @@ export function GET() {
     tags: p.tags ? p.tags.split(" | ") : [],
     has_free_sample: p.lead_magnet === "Y",
     sample_link: p.sample_link || null,
-    url: `https://agentassets.io/products/${p.slug}`,
+    url: `https://agentartifacts.io/products/${p.slug}`,
     cover_image_url: p.cover_image_url || null,
     status: p.status,
   }));
@@ -35,7 +35,7 @@ export function GET() {
     price_usd: b.price_usd,
     price_label: b.price_label,
     product_count: b.product_count,
-    url: `https://agentassets.io/bundles/${b.slug}`,
+    url: `https://agentartifacts.io/bundles/${b.slug}`,
     cover_image_url: b.cover_image_url || null,
   }));
 
@@ -43,13 +43,13 @@ export function GET() {
     {
       meta: {
         site: "Agent Artifacts",
-        url: "https://agentassets.io",
+        url: "https://agentartifacts.io",
         description: "Production-ready AI prompts, skill modules, agents, utilities, and docs.",
         total_products: products.length,
         total_bundles: bundles.length,
         categories: ["prompt", "skill", "agent", "utility", "doc"],
-        free_library: "https://agentassets.io/free-library",
-        contact: "support@agentassets.io",
+        free_library: "https://agentartifacts.io/free-library",
+        contact: "support@agentartifacts.io",
       },
       products,
       bundles,

@@ -1,3 +1,21 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "crons": [
+    {
+      "path": "/api/cron/marketing",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/cron/seo-blog",
+      "schedule": "0 10 * * 1"
+    },
+    {
+      "path": "/api/cron/product-review",
+      "schedule": "0 10 * * 4"
+    },
+    {
+      "path": "/api/cron/executive",
+      "schedule": "0 11 * * 5"
+    }
+  ]
 }

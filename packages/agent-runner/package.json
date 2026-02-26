@@ -1,0 +1,13 @@
+{
+  "name": "@agent-artifacts/agent-runner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "openai": "^4.77.0",
+    "pg": "^8.13.1",
+    "twitter-api-v2": "^1.29.0"
+  }
+}

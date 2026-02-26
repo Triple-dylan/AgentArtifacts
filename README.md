@@ -70,3 +70,18 @@ npm run build:framer-import
 
 - Default: in-memory runtime store (no `DATABASE_URL`).
 - Postgres: set `DATABASE_URL`, run migrations and seed scripts, then start API.
+
+## Agent Swarm
+
+Four scheduled agents run for the store:
+
+| Agent | Schedule | Responsibilities |
+|-------|----------|------------------|
+| Marketing | Daily 9am UTC | Tweets, replies, Moltbook posts |
+| SEO/Blog | Weekly Mon 10am | Blog posts, newsletter |
+| Product Improvement | Weekly Thu 10am | Product reviews, pricing analysis |
+| Executive | Weekly Fri 11am | Reviews all agents, produces report |
+
+**Setup:** Set `DATABASE_URL`, `OPENAI_API_KEY` (or `ANTHROPIC_API_KEY`), `CRON_SECRET`. Run `npm run db:migrate` to create `agent_runs`, `agent_reports`, `blog_posts` tables. See `env.example` for all variables.
+
+**Dashboard:** `/admin/agents?key=YOUR_ADMIN_API_KEY` shows runs and Executive reports.

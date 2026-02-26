@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { loadCatalog, loadBundles } from "@/lib/catalog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://agentassets.io";
+  const base = "https://agentartifacts.io";
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [

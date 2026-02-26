@@ -43,7 +43,7 @@ export default function ApiRegistryPage() {
             <div className="content-block">
               <h2>Base URL</h2>
               <div style={{ background: "var(--bg-alt)", borderRadius: "8px", padding: "0.75rem 1rem", fontFamily: "monospace", fontSize: "0.85rem", color: "var(--ink)", marginBottom: "0.75rem" }}>
-                https://api.agentassets.io
+                https://api.agentartifacts.io
               </div>
               <p style={{ fontSize: "0.875rem" }}>All endpoints accept and return JSON. Authentication via session token for protected routes.</p>
             </div>

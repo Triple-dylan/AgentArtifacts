@@ -49,7 +49,7 @@ export default function AccountPage() {
               For download issues, license questions, or refund requests — reach out to support.
             </p>
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-              <Link href="mailto:support@agentassets.io" className="btn btn-green-outline btn-sm">Email support</Link>
+              <Link href="mailto:support@agentartifacts.io" className="btn btn-green-outline btn-sm">Email support</Link>
               <Link href="/docs-guides" className="btn btn-outline btn-sm">View docs</Link>
               <Link href="/pricing#policy" className="btn btn-outline btn-sm">Refund policy</Link>
             </div>

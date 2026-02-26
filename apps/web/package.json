@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@agent-artifacts/agent-runner": "file:../../packages/agent-runner",
     "next": "15.5.12",
     "react": "19.0.0",
     "react-dom": "19.0.0"
