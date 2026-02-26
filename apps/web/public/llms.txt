@@ -1,36 +1,146 @@
 # Agent Artifacts — llms.txt
 # Machine-readable product index for LLM agents and crawlers
 # Site: https://agentassets.io
-# Updated: 2026-02-25
+# Updated: 2026-02-26
+# Total: 184 products, 8 bundles
 
 ## About
 Agent Artifacts is a digital download store selling production-ready AI prompts, skill modules, agents, utilities, and documentation.
 All products are delivered as Markdown and JSON files with instant digital delivery after Stripe checkout.
+Free samples available for most lead_magnet products — see sample_link on each listing.
 
-## Products
-- [Ideation Prompt Pack](https://agentassets.io/products/prompt-ideation-base) — PROMPT — Now $19 — Fast ideation prompts for agent tasks
+## Base URL
+https://agentassets.io
+
+## API
+- Machine-readable catalog JSON: https://agentassets.io/api/catalog
+- Sitemap: https://agentassets.io/sitemap.xml
+
+## PROMPTS (63 products)
+- [Ideation Prompt Pack](https://agentassets.io/products/prompt-ideation-base) — PROMPT — Now $19 — Fast ideation prompts for agent tasks [FREE SAMPLE]
 - [System Chain Prompt Suite](https://agentassets.io/products/prompt-system-chain) — PROMPT — Now $29 — Multi-role chain prompts for workflows
-- [Marketing Campaign Prompt Suite](https://agentassets.io/products/prompt-marketing-campaign-suite) — PROMPT — Now $29 — Campaign planning prompts for teams
-- [Copy Testing Prompt Pack](https://agentassets.io/products/prompt-copy-test-pack) — PROMPT — Now $19 — Prompt pack for message and offer testing
+- [Marketing Campaign Prompt Suite](https://agentassets.io/products/prompt-marketing-campaign-suite) — PROMPT — Now $29 — Campaign planning prompts for teams [FREE SAMPLE]
+- [Copy Testing Prompt Pack](https://agentassets.io/products/prompt-copy-test-pack) — PROMPT — Now $19 — Prompt pack for message and offer testing [FREE SAMPLE]
 - [SEO Cluster Prompt Suite](https://agentassets.io/products/prompt-seo-cluster-suite) — PROMPT — Now $29 — SEO planning prompts with cluster maps
-- [Ticket Triage Prompt Pack](https://agentassets.io/products/prompt-ticket-triage-pack) — PROMPT — Now $19 — Support ticket routing prompts
-- [Knowledge Base Writing Prompts](https://agentassets.io/products/prompt-kb-write-pack) — PROMPT — Now $19 — Prompts for support article drafting
+- [Ticket Triage Prompt Pack](https://agentassets.io/products/prompt-ticket-triage-pack) — PROMPT — Now $19 — Support ticket routing prompts [FREE SAMPLE]
+- [Knowledge Base Writing Prompts](https://agentassets.io/products/prompt-kb-write-pack) — PROMPT — Now $19 — Prompts for support article drafting [FREE SAMPLE]
 - [Agent Handoff Prompt Chain](https://agentassets.io/products/prompt-agent-handoff-chain) — PROMPT — Now $29 — Prompt chain for multi-agent handoffs
-- [Market Thesis Prompt Pack](https://agentassets.io/products/prompt-trading-market-thesis) — PROMPT — Now $29 — Prompts for market hypothesis building
+- [Market Thesis Prompt Pack](https://agentassets.io/products/prompt-trading-market-thesis) — PROMPT — Now $29 — Prompts for market hypothesis building [FREE SAMPLE]
 - [Event Driven Signal Prompt Suite](https://agentassets.io/products/prompt-trading-event-signal) — PROMPT — Now $39 — Prompts for event based signal extraction
 - [Trade Plan Prompt Chain](https://agentassets.io/products/prompt-trading-trade-plan) — PROMPT — Now $39 — Prompt chain for trade plan and execution notes
-- [Risk Journal Prompt Pack](https://agentassets.io/products/prompt-trading-risk-journal) — PROMPT — Now $29 — Prompts for risk review and journaling
+- [Risk Journal Prompt Pack](https://agentassets.io/products/prompt-trading-risk-journal) — PROMPT — Now $29 — Prompts for risk review and journaling [FREE SAMPLE]
+- [Sales Outreach Prompt Pack](https://agentassets.io/products/prompt-sales-outreach-base) — PROMPT — Now $19 — Cold outreach and follow-up prompt templates for SDRs and AEs [FREE SAMPLE]
+- [Pipeline Management Prompt Suite](https://agentassets.io/products/prompt-sales-pipeline-suite) — PROMPT — Now $29 — Prompt chain for deal qualification, scoring, and next-step generation
+- [Closing & Negotiation Prompt Pack](https://agentassets.io/products/prompt-closing-moves-base) — PROMPT — Now $24 — Prompt templates for objection handling, negotiation framing, and closing sequences
+- [Code Review Prompt Pack](https://agentassets.io/products/prompt-code-review-base) — PROMPT — Now $19 — Prompt templates for structured code review, PR feedback, and style checks [FREE SAMPLE]
+- [Debug & Root Cause Prompt Suite](https://agentassets.io/products/prompt-debug-chain-suite) — PROMPT — Now $29 — Chained prompts for systematic debugging, error tracing, and fix generation
+- [Architecture Review Prompt Suite](https://agentassets.io/products/prompt-architecture-suite) — PROMPT — Now $29 — Prompt chain for system design reviews, ADR generation, and trade-off analysis
+- [Expense Report Prompt Pack](https://agentassets.io/products/prompt-expense-report-base) — PROMPT — Now $19 — Prompt templates for categorizing expenses, drafting reports, and flagging anomalies [FREE SAMPLE]
+- [Financial Forecast Prompt Suite](https://agentassets.io/products/prompt-financial-forecast-suite) — PROMPT — Now $34 — Chained prompts for revenue projection, scenario modeling, and variance commentary
+- [Audit Prep Prompt Pack](https://agentassets.io/products/prompt-audit-prep-base) — PROMPT — Now $24 — Prompts for audit trail narration, control documentation, and auditor response drafts
+- [SQL Generation Prompt Pack](https://agentassets.io/products/prompt-sql-generation-base) — PROMPT — Now $24 — Natural language to SQL prompts for analysts, with validation and optimization hints [FREE SAMPLE]
+- [Dashboard Brief Prompt Suite](https://agentassets.io/products/prompt-dashboard-brief-suite) — PROMPT — Now $29 — Chained prompts for generating executive dashboard summaries and data narratives
+- [ETL Design Prompt Suite](https://agentassets.io/products/prompt-etl-design-suite) — PROMPT — Now $29 — Prompts for pipeline architecture, transformation logic, and data quality rule generation
+- [Job Description Prompt Pack](https://agentassets.io/products/prompt-job-description-base) — PROMPT — Now $19 — Prompt templates for writing inclusive, structured job descriptions by role and level [FREE SAMPLE]
+- [Interview Guide Prompt Suite](https://agentassets.io/products/prompt-interview-guide-suite) — PROMPT — Now $29 — Chained prompts for structured interview question generation and evaluation rubrics
+- [Employee Engagement Prompt Pack](https://agentassets.io/products/prompt-employee-engagement-base) — PROMPT — Now $19 — Prompts for pulse surveys, recognition messages, and team communication templates
+- [Algo Signal Prompts Pack](https://agentassets.io/products/prompt-algo-signals-pack) — PROMPT — Now $19 — 20 battle-tested prompts for generating quantitative entry and exit signals [FREE SAMPLE]
+- [Backtest Brief Prompt Pack](https://agentassets.io/products/prompt-backtest-brief-pack) — PROMPT — Now $19 — Structured prompts for backtesting analysis summaries and performance critique [FREE SAMPLE]
+- [Momentum Strategy Prompt Suite](https://agentassets.io/products/prompt-momentum-strategy-suite) — PROMPT — Now $29 — Comprehensive prompt suite for building and stress-testing momentum trading strategies
+- [Cursor Rules Prompt Pack](https://agentassets.io/products/prompt-cursor-rules-pack) — PROMPT — Now $19 — 30 ready-to-use .cursorrules prompt templates to supercharge AI-assisted coding [FREE SAMPLE]
+- [AI Refactor Prompt Pack](https://agentassets.io/products/prompt-ai-refactor-pack) — PROMPT — Now $19 — Targeted prompts for AI-driven code refactoring, cleanup, and pattern enforcement [FREE SAMPLE]
+- [Feature Build Prompt Suite](https://agentassets.io/products/prompt-feature-build-suite) — PROMPT — Now $29 — Full lifecycle prompts from spec to implementation and test generation for LLM-driven dev
+- [REST API Design Prompt Pack](https://agentassets.io/products/prompt-api-design-pack) — PROMPT — Now $19 — Proven prompts for endpoint design, versioning strategy, and OpenAPI spec generation [FREE SAMPLE]
+- [UI Component Prompt Pack](https://agentassets.io/products/prompt-ui-component-pack) — PROMPT — Now $19 — 50 reusable prompts for generating accessible, typed React and Vue components [FREE SAMPLE]
+- [Full-Stack Build Prompt Suite](https://agentassets.io/products/prompt-fullstack-build-suite) — PROMPT — Now $29 — End-to-end prompts covering auth, data layer, API, and deployment config for web apps
+- [React Native Styling Prompt Pack](https://agentassets.io/products/prompt-react-native-styling-pack) — PROMPT — Now $19 — 40 prompts for generating responsive layouts, themes, and animations in React Native [FREE SAMPLE]
+- [SwiftUI Patterns Prompt Pack](https://agentassets.io/products/prompt-swiftui-patterns-pack) — PROMPT — Now $19 — Curated prompts for SwiftUI views, navigation, and state management patterns [FREE SAMPLE]
+- [Mobile App Launch Prompt Suite](https://agentassets.io/products/prompt-mobile-launch-suite) — PROMPT — Now $29 — Full prompt suite from wireframe to App Store submission, including ASO and QA checklists
+- [Financial Model Assumptions Prompt Pack](https://agentassets.io/products/prompt-financial-model-assumptions-pack) — PROMPT — Now $19 — Structured prompts for documenting and stress-testing financial model assumptions [FREE SAMPLE]
+- [Board Narrative Prompt Pack](https://agentassets.io/products/prompt-board-narrative-pack) — PROMPT — Now $19 — Prompts for crafting concise board-ready financial narratives from raw model outputs [FREE SAMPLE]
+- [FP&A Planning Prompt Suite](https://agentassets.io/products/prompt-fpa-planning-suite) — PROMPT — Now $29 — Comprehensive prompt suite for budget cycles, variance analysis, and rolling forecasts
+- [Deal Review Prompt Pack](https://agentassets.io/products/prompt-deal-review-pack) — PROMPT — Now $19 — Quick-fire prompts for structuring deal reviews, exceptions, and approval narratives [FREE SAMPLE]
+- [Discounting Strategy Prompt Pack](https://agentassets.io/products/prompt-discounting-strategy-pack) — PROMPT — Now $19 — Prompts for structuring discount approval rationale, thresholds, and counter-offer logic [FREE SAMPLE]
+- [CPQ Workflow Prompt Suite](https://agentassets.io/products/prompt-cpq-workflow-suite) — PROMPT — Now $29 — End-to-end prompt suite for configure-price-quote workflows from RFP to contract redline
+- [Contract Review Prompt Pack](https://agentassets.io/products/prompt-contract-review-pack) — PROMPT — Now $19 — 30 prompts for first-pass contract review covering risk flags, missing clauses, and summaries [FREE SAMPLE]
+- [NDA Drafting Prompt Pack](https://agentassets.io/products/prompt-nda-drafting-pack) — PROMPT — Now $19 — Prompt templates for drafting mutual and one-way NDAs with jurisdiction-aware fallback clauses [FREE SAMPLE]
+- [Contract Lifecycle Prompt Suite](https://agentassets.io/products/prompt-contract-lifecycle-suite) — PROMPT — Now $29 — Full suite from initial term sheet through redline, execution, and renewal prompts
+- [Content Brief Prompt Pack](https://agentassets.io/products/prompt-content-brief-pack) — PROMPT — Now $19 — Keyword-driven content brief prompts that cut research time and align writers with intent [FREE SAMPLE]
+- [Meta Tag Optimization Prompt Pack](https://agentassets.io/products/prompt-meta-optimization-pack) — PROMPT — Now $19 — Prompts for crafting click-worthy title tags and meta descriptions at scale with A/B variants [FREE SAMPLE]
+- [Pillar & Cluster Content Prompt Suite](https://agentassets.io/products/prompt-pillar-cluster-suite) — PROMPT — Now $29 — Map, outline, and draft entire pillar-cluster content architectures with internal link strategy
+- [PRD Writing Prompt Pack](https://agentassets.io/products/prompt-prd-writing-pack) — PROMPT — Now $19 — Structured prompts for writing crisp PRDs, acceptance criteria, and edge case tables [FREE SAMPLE]
+- [User Research Synthesis Prompt Pack](https://agentassets.io/products/prompt-user-research-pack) — PROMPT — Now $19 — Prompts for synthesizing user interviews, surveys, and session data into actionable insights [FREE SAMPLE]
+- [Roadmap Planning Prompt Suite](https://agentassets.io/products/prompt-roadmap-planning-suite) — PROMPT — Now $29 — Covers opportunity sizing, prioritization frameworks, and quarterly roadmap narrative prompts
+- [CS Playbook Prompt Pack](https://agentassets.io/products/prompt-cs-playbook-pack) — PROMPT — Now $19 — 30 prompts for building customer success playbooks covering onboarding and expansion motions [FREE SAMPLE]
+- [QBR Narrative Prompt Pack](https://agentassets.io/products/prompt-qbr-narrative-pack) — PROMPT — Now $19 — Prompts for building compelling QBR decks with ROI summaries, risk flags, and next steps [FREE SAMPLE]
+- [Retention Playbook Prompt Suite](https://agentassets.io/products/prompt-retention-playbook-suite) — PROMPT — Now $29 — Comprehensive prompt suite for churn signals, save plays, and renewal negotiation scripts
+- [DeFi Protocol Analysis Prompt Pack](https://agentassets.io/products/prompt-defi-analysis-pack) — PROMPT — Now $19 — Prompts for analyzing DeFi protocol tokenomics, liquidity depth, and smart contract risk [FREE SAMPLE]
+- [Yield Strategy Prompt Pack](https://agentassets.io/products/prompt-yield-strategy-pack) — PROMPT — Now $19 — Structured prompts for evaluating and comparing on-chain yield strategies across protocols [FREE SAMPLE]
+- [Crypto Portfolio Strategy Prompt Suite](https://agentassets.io/products/prompt-crypto-portfolio-suite) — PROMPT — Now $29 — End-to-end suite for portfolio construction, rebalancing logic, and risk budgeting in crypto
+- [Runbook Generator Prompt Pack](https://agentassets.io/products/prompt-runbook-generator-pack) — PROMPT — Now $19 — Prompts for auto-generating runbooks for common SRE incidents and scheduled maintenance [FREE SAMPLE]
+- [Incident Postmortem Prompt Pack](https://agentassets.io/products/prompt-postmortem-pack) — PROMPT — Now $19 — Structured prompts for blameless postmortems covering timeline, impact, and action items [FREE SAMPLE]
+- [CI/CD Pipeline Prompt Suite](https://agentassets.io/products/prompt-cicd-pipeline-suite) — PROMPT — Now $29 — Prompt suite for designing, auditing, and optimizing CI/CD pipelines in GitHub Actions and GitLab
+
+## SKILLS (57 products)
 - [Tool Router Skill Module](https://agentassets.io/products/skill-tool-router) — SKILL — Now $89 — Tool call routing skill for agent workflows
 - [IO Validation Skill Module](https://agentassets.io/products/skill-io-validate) — SKILL — Now $99 — Schema driven input and output validation
 - [Error Retry Skill Module](https://agentassets.io/products/skill-error-retry) — SKILL — Now $89 — Retry timeout and fallback patterns
 - [Content Pipeline Skill](https://agentassets.io/products/skill-marketing-content-pipeline) — SKILL — Now $129 — Marketing content workflow skill with scoring
-- [Brief Scoring Skill](https://agentassets.io/products/skill-marketing-brief-scoring) — SKILL — Now $79 — Quality scoring skill for marketing briefs
+- [Brief Scoring Skill](https://agentassets.io/products/skill-marketing-brief-scoring) — SKILL — Now $79 — Quality scoring skill for marketing briefs [FREE SAMPLE]
 - [SLA Automation Skill](https://agentassets.io/products/skill-support-sla-automation) — SKILL — Now $109 — Support SLA timer and breach handling skill
 - [Escalation Flow Skill](https://agentassets.io/products/skill-support-escalation-flow) — SKILL — Now $99 — Escalation logic with guardrails
 - [Trading Data Normalize Skill](https://agentassets.io/products/skill-trading-data-normalize) — SKILL — Now $149 — Normalize market and event data feeds
 - [Strategy IO Skill](https://agentassets.io/products/skill-trading-strategy-io) — SKILL — Now $169 — Structured strategy input and output schemas
 - [Risk Check Skill](https://agentassets.io/products/skill-trading-risk-check) — SKILL — Now $189 — Risk controls for signal and order validation
 - [Execution Adapter Skill](https://agentassets.io/products/skill-trading-execution-adapter) — SKILL — Now $199 — Connector skill for paper and live execution
+- [Lead Scoring Skill](https://agentassets.io/products/skill-lead-scoring-pro) — SKILL — Now $99 — Structured skill for AI-driven lead qualification and ICP fit scoring
+- [Deal Brief Generator Skill](https://agentassets.io/products/skill-deal-brief-pro) — SKILL — Now $89 — Auto-generate deal briefs and account summaries from CRM data
+- [Competitive Intelligence Skill](https://agentassets.io/products/skill-competitive-intel-pro) — SKILL — Now $89 — Skill for summarizing competitor positioning from web data and call notes
+- [PR Summary Skill](https://agentassets.io/products/skill-pr-summary-pro) — SKILL — Now $99 — Auto-summarize pull requests with diff analysis, risk flags, and reviewer guidance
+- [Incident Response Skill](https://agentassets.io/products/skill-incident-response-pro) — SKILL — Now $119 — Structured skill for triage, impact assessment, and runbook generation during incidents
+- [Account Reconciliation Skill](https://agentassets.io/products/skill-reconciliation-pro) — SKILL — Now $99 — Skill for matching transactions, identifying discrepancies, and generating reconciliation reports
+- [Invoice Processing Skill](https://agentassets.io/products/skill-invoice-processing-pro) — SKILL — Now $89 — Extract, validate, and route invoice data with structured output and approval logic
+- [Cash Flow Analysis Skill](https://agentassets.io/products/skill-cashflow-analysis-pro) — SKILL — Now $99 — Structured skill for cash flow projection, liquidity analysis, and alert generation
+- [Anomaly Detection Skill](https://agentassets.io/products/skill-anomaly-detection-pro) — SKILL — Now $119 — Structured skill for statistical anomaly detection with root cause hypothesis generation
+- [Data Cleaning Skill](https://agentassets.io/products/skill-data-cleaning-pro) — SKILL — Now $89 — Skill for profiling, validating, and cleaning structured datasets with output schemas
+- [Candidate Screening Skill](https://agentassets.io/products/skill-candidate-screening-pro) — SKILL — Now $99 — Structured skill for CV parsing, requirement matching, and shortlist generation
+- [Performance Review Skill](https://agentassets.io/products/skill-performance-review-pro) — SKILL — Now $89 — Skill for drafting structured performance reviews from manager notes and goal data
+- [Signal Filter & Dedup Skill](https://agentassets.io/products/skill-signal-filter-module) — SKILL — Now $99 — Deduplicate and rank competing trade signals before position sizing
+- [Dynamic Position Sizing Skill](https://agentassets.io/products/skill-position-sizing-module) — SKILL — Now $119 — Kelly Criterion and volatility-adjusted position sizing for automated strategies
+- [Live Order Router Skill](https://agentassets.io/products/skill-live-order-router) — SKILL — Now $149 — Broker-agnostic order routing skill for live execution with pre-trade risk gates
+- [Code Planner Decomposition Skill](https://agentassets.io/products/skill-code-planner-module) — SKILL — Now $89 — Breaks natural language feature requests into ordered implementation tasks with test stubs
+- [AI Pull Request Review Skill](https://agentassets.io/products/skill-pr-review-module) — SKILL — Now $99 — Automated PR review skill covering logic errors, security smells, and code style
+- [Automated Test Generator Skill](https://agentassets.io/products/skill-test-generator-module) — SKILL — Now $109 — Generates unit, integration, and edge-case tests from existing code with coverage reports
+- [Database Schema Designer Skill](https://agentassets.io/products/skill-db-schema-designer) — SKILL — Now $89 — Generates normalized DB schemas from domain descriptions with migration scripts
+- [Auth Flow Implementation Skill](https://agentassets.io/products/skill-auth-flow-module) — SKILL — Now $99 — Generates JWT, OAuth2, and session auth implementations for Node, Python, or Go APIs
+- [Web Performance Audit Skill](https://agentassets.io/products/skill-web-perf-audit) — SKILL — Now $119 — Analyzes codebase for Core Web Vitals issues and generates targeted optimization patches
+- [Offline-First Sync Skill](https://agentassets.io/products/skill-offline-first-sync) — SKILL — Now $89 — Generates conflict-resolution and sync logic for offline-first React Native and Flutter apps
+- [Push Notification Orchestration Skill](https://agentassets.io/products/skill-push-notification-module) — SKILL — Now $99 — Skill for segmenting, scheduling, and A/B testing push notifications via FCM and APNs
+- [Universal Deep Link Handler Skill](https://agentassets.io/products/skill-deep-link-handler) — SKILL — Now $109 — Generates deep link routing tables and handlers for iOS Universal Links and Android App Links
+- [DCF Model Builder Skill](https://agentassets.io/products/skill-dcf-model-builder) — SKILL — Now $99 — Builds structured DCF models from company data with sensitivity tables and WACC automation
+- [Debt Covenant Monitoring Skill](https://agentassets.io/products/skill-covenant-check-module) — SKILL — Now $119 — Extracts and monitors financial covenant thresholds against actuals with alert generation
+- [13-Week Cash Flow Forecast Skill](https://agentassets.io/products/skill-cash-forecast-module) — SKILL — Now $129 — Auto-generates rolling 13-week cash forecasts from AP/AR data with scenario toggles
+- [Deal Scoring & Risk Flag Skill](https://agentassets.io/products/skill-deal-scoring-module) — SKILL — Now $89 — Scores deal health on margin, discount depth, and close probability with risk flags
+- [Contract Redline Suggestion Skill](https://agentassets.io/products/skill-contract-redline-module) — SKILL — Now $109 — Suggests redlines for commercial terms, liability caps, and payment milestones in SaaS contracts
+- [Dynamic Quote Builder Skill](https://agentassets.io/products/skill-quote-builder-module) — SKILL — Now $119 — Generates tiered pricing quotes with volume discounts, bundling, and multi-year lock-in logic
+- [Legal Clause Extraction Skill](https://agentassets.io/products/skill-clause-extraction-module) — SKILL — Now $99 — Extracts and categorizes key clauses from contracts with risk scoring per clause type
+- [Obligation & Deadline Tracker Skill](https://agentassets.io/products/skill-obligation-tracker-module) — SKILL — Now $109 — Surfaces contract obligations, notice periods, and renewal deadlines from uploaded agreements
+- [AI Redline Generator Skill](https://agentassets.io/products/skill-redline-generator-module) — SKILL — Now $129 — Generates tracked-changes redlines on commercial contracts against your standard playbook
+- [SERP-Aware Rewrite Skill](https://agentassets.io/products/skill-serp-rewrite-module) — SKILL — Now $89 — Rewrites existing content to outrank top SERP results using semantic gap analysis
+- [Link Building Outreach Skill](https://agentassets.io/products/skill-link-building-module) — SKILL — Now $99 — Identifies link opportunities and generates personalized outreach emails for link acquisition
+- [Content Audit & Prune Skill](https://agentassets.io/products/skill-content-audit-module) — SKILL — Now $109 — Audits site content for thin pages, cannibalization, and decay; outputs a prioritized prune plan
+- [Feature Scoring & Prioritization Skill](https://agentassets.io/products/skill-feature-scoring-module) — SKILL — Now $89 — Applies RICE, ICE, and weighted scoring models to your feature backlog with justifications
+- [Product Metrics Definition Skill](https://agentassets.io/products/skill-product-metrics-module) — SKILL — Now $99 — Defines north star metrics, guardrail metrics, and measurement plans for product initiatives
+- [Sprint Planning & Story Splitter Skill](https://agentassets.io/products/skill-sprint-planning-module) — SKILL — Now $109 — Splits epics into right-sized stories, estimates complexity, and drafts sprint ceremonies
+- [Churn Risk Scoring Skill](https://agentassets.io/products/skill-churn-scoring-module) — SKILL — Now $89 — Scores accounts on usage, engagement, and support signals to produce churn risk rankings
+- [Customer Health Score Skill](https://agentassets.io/products/skill-customer-health-module) — SKILL — Now $99 — Builds composite health scores from product usage, NPS, support tickets, and contract data
+- [Account Escalation Handler Skill](https://agentassets.io/products/skill-escalation-handler-module) — SKILL — Now $109 — Detects escalation signals and auto-generates tiered response plans with stakeholder routing
+- [On-Chain Data Fetcher Skill](https://agentassets.io/products/skill-on-chain-data-module) — SKILL — Now $99 — Fetches and normalizes on-chain metrics from Ethereum and L2s for agent consumption
+- [DEX Arbitrage Scanner Skill](https://agentassets.io/products/skill-dex-arb-scanner) — SKILL — Now $119 — Scans AMM pools for arbitrage spreads and estimates gas-adjusted profit potential
+- [Smart Contract Audit Assist Skill](https://agentassets.io/products/skill-smart-contract-audit-assist) — SKILL — Now $129 — Flags common Solidity vulnerabilities including reentrancy, overflow, and access control issues
+- [Incident Triage & Routing Skill](https://agentassets.io/products/skill-incident-triage-module) — SKILL — Now $89 — Classifies incoming alerts by severity, maps to runbooks, and routes to on-call responders
+
+## AGENTS (29 products)
 - [Content Ops Agent](https://agentassets.io/products/agent-marketing-content-ops) — AGENT — Now $499 — Packaged marketing operations agent
 - [SEO Autoplan Agent](https://agentassets.io/products/agent-marketing-seo-autoplan) — AGENT — Now $399 — Agent for SEO planning and cluster execution
 - [Ticket Autopilot Agent](https://agentassets.io/products/agent-support-ticket-autopilot) — AGENT — Now $499 — Agent for support triage and workflow automation
@@ -39,19 +149,68 @@ All products are delivered as Markdown and JSON files with instant digital deliv
 - [Paper Trading Orchestrator Agent](https://agentassets.io/products/agent-trading-paper-orchestrator) — AGENT — Now $799 — Agent for paper trade simulation workflows
 - [Live Execution Coordinator Agent](https://agentassets.io/products/agent-trading-live-coordinator) — AGENT — Now $999 — Agent coordinating live order execution safely
 - [Post Trade Analytics Agent](https://agentassets.io/products/agent-trading-posttrade-analytics) — AGENT — Now $699 — Agent for post-trade analysis and journaling
-- [JSON Schema Pack](https://agentassets.io/products/utility-json-schema-pack) — UTILITY — Now $79 — Reusable schema pack for agent outputs
-- [Guardrails YAML Kit](https://agentassets.io/products/utility-guardrails-yaml) — UTILITY — Now $89 — Guardrail policies and safety templates
-- [Memory Template Library](https://agentassets.io/products/utility-memory-templates) — UTILITY — Now $69 — Memory templates for context persistence
+- [Outbound Sales Ops Agent](https://agentassets.io/products/agent-outbound-ops-pro) — AGENT — Now $499 — End-to-end outbound agent: prospect research, personalized outreach, follow-up scheduling
+- [CRM Auto-Update Agent](https://agentassets.io/products/agent-crm-update-pro) — AGENT — Now $399 — Agent that extracts call notes and updates CRM fields automatically
+- [Release Ops Agent](https://agentassets.io/products/agent-release-ops-pro) — AGENT — Now $399 — Agent that drafts changelogs, release notes, and deployment checklists from git history
+- [Developer Onboarding Agent](https://agentassets.io/products/agent-dev-onboarding-pro) — AGENT — Now $449 — Guides new engineers through codebase setup, architecture overview, and first tasks
+- [FP&A Automation Agent](https://agentassets.io/products/agent-fpa-ops-pro) — AGENT — Now $599 — End-to-end agent for financial planning: data ingestion, model updates, and commentary drafts
+- [Budget Review Agent](https://agentassets.io/products/agent-budget-review-pro) — AGENT — Now $449 — Reviews budget submissions, flags overages, and generates executive summary commentary
+- [Automated Report Agent](https://agentassets.io/products/agent-report-ops-pro) — AGENT — Now $499 — Agent that pulls data, runs analysis, generates narrative, and formats reports automatically
+- [Data Insights Agent](https://agentassets.io/products/agent-data-insights-pro) — AGENT — Now $449 — Conversational agent for ad-hoc data Q&A, trend identification, and KPI commentary
+- [Employee Onboarding Agent](https://agentassets.io/products/agent-employee-onboarding-pro) — AGENT — Now $449 — Guides new hires through onboarding: policy docs, team intros, tool setup, and check-ins
+- [Recruiting Ops Agent](https://agentassets.io/products/agent-recruiting-ops-pro) — AGENT — Now $599 — End-to-end recruiting agent: sourcing, screening, scheduling, and offer generation
+- [Algo Strategy Runner Agent](https://agentassets.io/products/agent-algo-strategy-runner) — AGENT — Now $499 — End-to-end agent that ingests signals, validates risk, and submits paper or live orders
+- [Vibe Dev Loop Agent](https://agentassets.io/products/agent-vibe-dev-loop) — AGENT — Now $499 — Full-cycle agent: spec intake, code generation, test execution, and lint-fix loop
+- [Web App Scaffolding Agent](https://agentassets.io/products/agent-web-app-scaffolder) — AGENT — Now $599 — Generates production-ready app scaffold with CI/CD, env config, and first feature implemented
+- [Mobile App Builder Agent](https://agentassets.io/products/agent-mobile-app-builder) — AGENT — Now $499 — Agent that builds full React Native app structure from a product brief including navigation and auth
+- [Treasury Ops Agent](https://agentassets.io/products/agent-treasury-ops) — AGENT — Now $599 — Agent that monitors cash positions, flags covenant breaches, and drafts treasury memos
+- [Deal Desk Automation Agent](https://agentassets.io/products/agent-deal-desk-automation) — AGENT — Now $499 — Agent that reviews deals, checks approval policies, generates quotes, and drafts approval emails
+- [Contract Review & Redline Agent](https://agentassets.io/products/agent-contract-review-agent) — AGENT — Now $599 — Agent that ingests contracts, flags risks, suggests redlines, and summarizes for business approval
+- [SEO Content Engine Agent](https://agentassets.io/products/agent-seo-content-engine) — AGENT — Now $499 — Agent that researches keywords, writes briefs, generates drafts, and schedules publishing
+- [PM Workflow Automation Agent](https://agentassets.io/products/agent-pm-workflow-agent) — AGENT — Now $499 — Agent that turns raw discovery notes into PRDs, tickets, and roadmap slides automatically
+- [Customer Success Automation Agent](https://agentassets.io/products/agent-customer-success-agent) — AGENT — Now $499 — Agent that monitors account health, triggers save plays, and drafts renewal prep materials
+- [DeFi Yield Strategy Analyzer Agent](https://agentassets.io/products/agent-defi-yield-agent) — AGENT — Now $599 — Agent that monitors yield opportunities, models risk/reward, and summarizes for human review
+
+## UTILITYS (26 products)
+- [JSON Schema Pack](https://agentassets.io/products/utility-json-schema-pack) — UTILITY — Now $79 — Reusable schema pack for agent outputs [FREE SAMPLE]
+- [Guardrails YAML Kit](https://agentassets.io/products/utility-guardrails-yaml) — UTILITY — Now $89 — Guardrail policies and safety templates [FREE SAMPLE]
+- [Memory Template Library](https://agentassets.io/products/utility-memory-templates) — UTILITY — Now $69 — Memory templates for context persistence [FREE SAMPLE]
 - [Marketing OpenAPI Wrapper Pack](https://agentassets.io/products/utility-marketing-openapi-wrapper) — UTILITY — Now $99 — OpenAPI wrapper templates for marketing APIs
 - [Support Policy Template Kit](https://agentassets.io/products/utility-support-policy-templates) — UTILITY — Now $89 — Policy templates for support workflows
-- [Market Schema Pack](https://agentassets.io/products/utility-trading-market-schemas) — UTILITY — Now $129 — Prediction and trading market schema library
+- [Market Schema Pack](https://agentassets.io/products/utility-trading-market-schemas) — UTILITY — Now $129 — Prediction and trading market schema library [FREE SAMPLE]
 - [Trading Risk Policy Kit](https://agentassets.io/products/utility-trading-risk-policy-kit) — UTILITY — Now $149 — Risk policy templates for paper and live execution
-- [Agent Cookbook](https://agentassets.io/products/doc-agent-cookbook) — DOC — Now $49 — Implementation recipes for agent builders
-- [Compatibility Guide](https://agentassets.io/products/doc-compatibility-guide) — DOC — Now $39 — Cross platform compatibility reference guide
+- [CRM Data Schema Pack](https://agentassets.io/products/utility-crm-schema-core) — UTILITY — Now $79 — JSON schemas for contacts, deals, activities, and pipeline stage transitions
+- [CI/CD Pipeline Schema Pack](https://agentassets.io/products/utility-cicd-schema-core) — UTILITY — Now $79 — JSON schemas for pipeline stages, build configs, and deployment manifests
+- [API Documentation Templates](https://agentassets.io/products/utility-api-doc-templates) — UTILITY — Now $69 — Markdown templates for REST, GraphQL, and gRPC API documentation
+- [FP&A Data Schema Pack](https://agentassets.io/products/utility-fpa-schema-core) — UTILITY — Now $79 — JSON schemas for cost centers, budgets, actuals, and forecast periods
+- [Data Metadata Schema Pack](https://agentassets.io/products/utility-data-metadata-schema) — UTILITY — Now $69 — JSON schemas for datasets, metrics, dimensions, and pipeline lineage metadata
+- [KPI Definition Library](https://agentassets.io/products/utility-kpi-library-core) — UTILITY — Now $79 — Structured KPI definitions with formulas, benchmarks, and data source mappings
+- [HR Data Schema Pack](https://agentassets.io/products/utility-hr-data-schema-core) — UTILITY — Now $69 — JSON schemas for employees, roles, compensation bands, and performance cycles
+- [HR Policy Templates](https://agentassets.io/products/utility-hr-policy-templates) — UTILITY — Now $59 — Structured Markdown templates for PTO, remote work, code of conduct, and review policies
+- [Trade Log & Attribution Utility](https://agentassets.io/products/utility-trade-log-schema) — UTILITY — Now $69 — Structured trade log schema with PnL attribution and export templates for review
+- [Vibe Coding Workflow Guide](https://agentassets.io/products/doc-vibe-coding-guide) — UTILITY — Now $39 — Illustrated guide to structuring LLM-driven development workflows with Cursor and Copilot
+- [OpenAPI Spec Builder Utility](https://agentassets.io/products/utility-openapi-spec-builder) — UTILITY — Now $59 — Utility for auto-generating validated OpenAPI 3.1 specs from route handlers and type annotations
+- [Mobile Release Playbook](https://agentassets.io/products/doc-mobile-release-guide) — UTILITY — Now $39 — Step-by-step release playbook for iOS and Android covering testing, review, and rollout strategy
+- [Financial Data Schema Utility](https://agentassets.io/products/utility-financial-data-schema) — UTILITY — Now $59 — Canonical schema definitions for financial statements, KPIs, and segment reporting
+- [Deal Approval Matrix Utility](https://agentassets.io/products/utility-approval-matrix) — UTILITY — Now $49 — Configurable approval matrix templates with threshold rules for discount and contract exceptions
+- [Legal Clause Library Utility](https://agentassets.io/products/utility-legal-clause-library) — UTILITY — Now $79 — Curated library of 200+ fallback and standard clauses organized by contract type and jurisdiction
+- [Schema Markup Generator Utility](https://agentassets.io/products/utility-schema-markup-generator) — UTILITY — Now $49 — Generates structured data JSON-LD for articles, products, FAQs, and local business pages
+- [PM AI Workflow Playbook](https://agentassets.io/products/doc-pm-ai-playbook) — UTILITY — Now $39 — Practical playbook for integrating LLMs into discovery, planning, and delivery workflows
+- [Customer Success Data Schema Utility](https://agentassets.io/products/utility-cs-data-schema) — UTILITY — Now $49 — Canonical schemas for account health, onboarding milestones, and renewal data pipelines
+- [Wallet & Portfolio Schema Utility](https://agentassets.io/products/utility-wallet-portfolio-schema) — UTILITY — Now $69 — Structured schemas for tracking multi-chain wallet positions, token balances, and PnL
+
+## DOCS (9 products)
+- [Agent Cookbook](https://agentassets.io/products/doc-agent-cookbook) — DOC — Now $49 — Implementation recipes for agent builders [FREE SAMPLE]
+- [Compatibility Guide](https://agentassets.io/products/doc-compatibility-guide) — DOC — Now $39 — Cross platform compatibility reference guide [FREE SAMPLE]
 - [Marketing Agent Playbook](https://agentassets.io/products/doc-marketing-playbook) — DOC — Now $69 — Best practices for marketing automation assets
 - [Support Ops Agent Playbook](https://agentassets.io/products/doc-support-playbook) — DOC — Now $69 — Best practices for support automation assets
+- [Sales AI Playbook](https://agentassets.io/products/doc-sales-playbook) — DOC — Now $39 — Comprehensive guide for integrating AI into SDR and AE workflows [FREE SAMPLE]
+- [Engineering AI Cookbook](https://agentassets.io/products/doc-engineering-ai-cookbook) — DOC — Now $49 — Practical recipes for integrating LLMs into engineering workflows and CI pipelines
+- [Finance AI Playbook](https://agentassets.io/products/doc-finance-ai-playbook) — DOC — Now $49 — Guide for deploying AI in finance: FP&A, AP/AR automation, compliance considerations
+- [Data Analytics AI Cookbook](https://agentassets.io/products/doc-data-analytics-cookbook) — DOC — Now $49 — Practical recipes for AI-augmented analytics: SQL generation, insight summarization, charting
+- [HR AI Playbook](https://agentassets.io/products/doc-hr-ai-playbook) — DOC — Now $49 — Guide for deploying AI in HR: recruiting automation, performance reviews, and compliance
 
-## Bundles
+## BUNDLES (8 bundles)
 - [Starter Bundle](https://agentassets.io/bundles/bundle-starter) — BUNDLE — Now $249 — Entry bundle for first-time builders
 - [Agent Builder Kit](https://agentassets.io/bundles/bundle-agent-builder-kit) — BUNDLE — Now $999 — Core build kit for agent engineers
 - [Marketing Vertical Pack](https://agentassets.io/bundles/bundle-marketing-vertical) — BUNDLE — Now $1,299 — Marketing focused bundle for campaign systems
@@ -62,12 +221,19 @@ All products are delivered as Markdown and JSON files with instant digital deliv
 - [Enterprise Kit](https://agentassets.io/bundles/bundle-enterprise-kit) — BUNDLE — Now $5,000 — Custom enterprise package with support and licensing
 
 ## Categories
-- prompt: Ready-to-use prompt packs and chains
-- skill: Skill modules with schemas and error handling
-- agent: Full packaged agents with configs and docs
-- utility: JSON schemas, guardrails, and templates
-- doc: Playbooks, cookbooks, and compatibility guides
+- prompt: Ready-to-use prompt packs and chains — ideal for Claude, GPT-4, Cursor
+- skill: Skill MD modules with schemas and error handling — drop into any agent framework
+- agent: Full packaged agents with configs, manifests, and docs
+- utility: JSON schemas, guardrails YAML, and OpenAPI wrapper templates
+- doc: Playbooks, cookbooks, and compatibility guides for AI builders
 - bundle: Curated product bundles at discounted prices
+
+## Free Samples
+Products marked [FREE SAMPLE] include a preview you can download before purchasing.
+Free Library: https://agentassets.io/free-library
+
+## Compatibility
+Products are compatible with: OpenAI API, Anthropic Claude, Cursor, LangChain, LangGraph, AutoGen, OpenAPI
 
 ## Licensing
 All products are licensed for commercial single-seat use. Redistribution and resale of raw files is not permitted.

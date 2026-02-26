@@ -26,8 +26,27 @@ export default function HomePage() {
   const featured = rows.filter((r) => r.lead_magnet === "Y").slice(0, 8);
   const featuredBundles = bundles.slice(0, 4);
 
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Agent Artifacts — AI Prompts, Skills & Agents",
+    "description": "Production-ready AI prompts, skill modules, agents, utilities, and docs for AI builders.",
+    "url": "https://agentassets.io/catalog",
+    "numberOfItems": stats.total,
+    "itemListElement": rows.slice(0, 50).map((r, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://agentassets.io/products/${r.slug}`,
+      "name": r.name,
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       {/* HERO */}
       <section className="hero">
         <div className="container hero-inner">
