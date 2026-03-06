@@ -19,6 +19,7 @@
     "db:seed": "node scripts/seed-db.js"
   },
   "dependencies": {
+    "next-auth": "^5.0.0-beta.30",
     "pg": "^8.13.1"
   },
   "engines": {

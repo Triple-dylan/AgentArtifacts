@@ -160,8 +160,8 @@ function LibraryTab() {
   );
 }
 
-function PurchasesTab() {
-  const [email, setEmail] = useState("");
+function PurchasesTab({ defaultEmail = "" }: { defaultEmail?: string }) {
+  const [email, setEmail] = useState(defaultEmail);
   const [loading, setLoading] = useState(false);
   const [purchases, setPurchases] = useState<Purchase[] | null>(null);
   const [error, setError] = useState("");
@@ -260,7 +260,7 @@ function PurchasesTab() {
   );
 }
 
-export default function AccountDashboard() {
+export default function AccountDashboard({ email = "" }: { email?: string }) {
   const [tab, setTab] = useState<"library" | "purchases">("library");
 
   const tabStyle = (active: boolean): React.CSSProperties => ({
@@ -284,7 +284,7 @@ export default function AccountDashboard() {
       </div>
 
       {tab === "library" && <LibraryTab />}
-      {tab === "purchases" && <PurchasesTab />}
+      {tab === "purchases" && <PurchasesTab defaultEmail={email} />}
 
       {/* Support */}
       <div className="content-block" style={{ marginTop: "2rem", background: "var(--green-light)", borderColor: "rgba(26,107,80,0.2)" }}>
