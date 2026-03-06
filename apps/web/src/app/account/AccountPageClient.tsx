@@ -1,9 +1,9 @@
 "use client";
 
-import { useUser, SignInButton, SignUpButton } from "@clerk/nextjs";
+import { ClerkProvider, useUser, SignInButton, SignUpButton } from "@clerk/nextjs";
 import AccountDashboard from "./AccountDashboard";
 
-export default function AccountPageClient() {
+function AccountContent() {
   const { user, isLoaded } = useUser();
 
   if (!isLoaded) {
@@ -81,4 +81,12 @@ export default function AccountPageClient() {
   }
 
   return <AccountDashboard email={user.emailAddresses[0]?.emailAddress ?? ""} />;
+}
+
+export default function AccountPageClient() {
+  return (
+    <ClerkProvider>
+      <AccountContent />
+    </ClerkProvider>
+  );
 }
