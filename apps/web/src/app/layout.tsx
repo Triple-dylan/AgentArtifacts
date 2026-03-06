@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import PromoPopup from "@/components/PromoPopup";
+import { ClerkProvider, Show, SignInButton, UserButton } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: { default: "Agent Artifacts — AI Prompts, Skills & Agents", template: "%s | Agent Artifacts" },
@@ -33,6 +34,7 @@ const navLinks = [
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body>
         <nav className="nav">
@@ -49,9 +51,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/search" className="nav-link" style={{ border: "1px solid var(--border)", borderRadius: "6px" }}>
                 🔍 Search
               </Link>
-              <Link href="/account" className="nav-link" style={{ border: "1px solid var(--border)", borderRadius: "6px" }}>
-                Account
-              </Link>
+              <Show when="signed-out">
+                <SignInButton mode="modal">
+                  <button className="nav-link" style={{ border: "1px solid var(--border)", borderRadius: "6px", background: "none", cursor: "pointer", fontFamily: "inherit" }}>
+                    Sign in
+                  </button>
+                </SignInButton>
+              </Show>
+              <Show when="signed-in">
+                <Link href="/account" className="nav-link" style={{ border: "1px solid var(--border)", borderRadius: "6px" }}>
+                  Account
+                </Link>
+                <UserButton />
+              </Show>
             </div>
           </div>
         </nav>
@@ -119,5 +131,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
