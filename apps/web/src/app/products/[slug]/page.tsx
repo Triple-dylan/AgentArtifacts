@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { loadCatalog, categoryBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
+import SaveToLibraryButton from "@/components/SaveToLibraryButton";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -229,6 +230,14 @@ export default async function ProductDetailPage({ params }: Props) {
                     {row.cta_secondary_label || "Preview Sample"} →
                   </a>
                 )}
+                <SaveToLibraryButton
+                  id={row.product_id}
+                  slug={row.slug}
+                  name={row.name}
+                  category={row.category}
+                  price_label={row.price_label}
+                  type="product"
+                />
                 <p className="sidebar-note">Instant digital delivery after checkout</p>
                 <p className="sidebar-note">License terms apply. Redistribution not included.</p>
               </div>

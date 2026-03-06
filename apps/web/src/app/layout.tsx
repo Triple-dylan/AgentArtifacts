@@ -103,9 +103,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <div className="footer-col-title">Legal</div>
                 <div className="footer-links">
+                  <Link href="/privacy" className="footer-link">Privacy Policy</Link>
+                  <Link href="/terms" className="footer-link">Terms of Service</Link>
+                  <Link href="/refund-policy" className="footer-link">Refund Policy</Link>
                   <Link href="/pricing#license" className="footer-link">License Terms</Link>
-                  <Link href="/pricing#policy" className="footer-link">Refund Policy</Link>
-                  <Link href="/pricing#disclosure" className="footer-link">Trading Disclosure</Link>
+                  <Link href="/contact" className="footer-link">Contact</Link>
                 </div>
               </div>
             </div>

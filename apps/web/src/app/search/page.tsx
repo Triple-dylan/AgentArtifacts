@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { loadCatalog, loadBundles, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
+
+export const metadata: Metadata = {
+  title: "Search",
+  description: "Search the Agent Artifacts catalog — find AI prompts, skill modules, agents, utilities, and bundles.",
+};
 
 type Props = { searchParams: Promise<{ q?: string }> };
 

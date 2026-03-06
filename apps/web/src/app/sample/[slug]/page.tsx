@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { loadCatalog, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
+import SaveToLibraryButton from "@/components/SaveToLibraryButton";
 import fs from "fs";
 import path from "path";
 
@@ -142,6 +143,14 @@ export default async function SamplePage({ params }: Props) {
                 >
                   ↓ Download Free File
                 </a>
+                <SaveToLibraryButton
+                  id={row.product_id}
+                  slug={row.slug}
+                  name={row.name}
+                  category={row.category}
+                  price_label="Free"
+                  type="free"
+                />
                 <p className="sidebar-note">No account needed · No email required</p>
                 <p className="sidebar-note">Redistribution not permitted</p>
               </div>

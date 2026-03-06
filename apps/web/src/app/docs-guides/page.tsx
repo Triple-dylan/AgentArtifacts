@@ -1,12 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Docs & Guides",
+  description: "Implementation walkthroughs, compatibility playbooks, and integration guides for every product type in the Agent Artifacts catalog.",
+};
+
 const GUIDES = [
-  { icon: "🤖", title: "Agent Builder Guide", desc: "How to assemble prompts, skills, and agents into production workflows. Covers input/output contracts, handoff patterns, and error handling.", tags: ["Prompt", "Skill", "Agent"], link: "#" },
-  { icon: "⚡", title: "Quick Integration", desc: "Get up and running in under 30 minutes. Copy-paste patterns for OpenAI, Anthropic, and LangChain integrations with any product from the catalog.", tags: ["OpenAI", "Anthropic", "LangChain"], link: "#" },
-  { icon: "🛡️", title: "Trading Risk Playbook", desc: "Disclosure requirements, preflight validation, kill-switch configuration, and fallback templates for all trading and prediction market products.", tags: ["Trading", "Risk", "Compliance"], link: "#" },
-  { icon: "🔄", title: "Compatibility Matrix", desc: "Provider and framework adaptation rules. How to port any product between OpenAI, Anthropic, Cursor, and LangGraph without breaking contracts.", tags: ["Compatibility", "Migration"], link: "#" },
-  { icon: "📦", title: "Schema &amp; Format Reference", desc: "JSON schema definitions, Markdown format specs, and YAML guardrail structures used across all product types.", tags: ["Schema", "JSON", "YAML"], link: "/api-registry" },
-  { icon: "🔧", title: "Skill Module Integration", desc: "How to install and call SKILL.md modules, handle tool routing, validate IO, and wire error retry patterns into your agent stack.", tags: ["Skill", "Tool Use"], link: "#" },
+  { icon: "🤖", title: "Agent Builder Guide", desc: "How to assemble prompts, skills, and agents into production workflows. Covers input/output contracts, handoff patterns, and error handling.", tags: ["Prompt", "Skill", "Agent"], link: "/docs-guides/agent-builder" },
+  { icon: "⚡", title: "Quick Integration", desc: "Get up and running in under 30 minutes. Copy-paste patterns for OpenAI, Anthropic, Cursor, and LangChain integrations with any product from the catalog.", tags: ["OpenAI", "Anthropic", "LangChain"], link: "/docs-guides/quick-integration" },
+  { icon: "🛡️", title: "Trading Risk Playbook", desc: "Disclosure requirements, preflight validation, kill-switch configuration, and fallback templates for all trading and prediction market products.", tags: ["Trading", "Risk", "Compliance"], link: "/docs-guides/trading-risk" },
+  { icon: "🔄", title: "Compatibility Matrix", desc: "Provider and framework adaptation rules. How to port any product between OpenAI, Anthropic, Cursor, and LangGraph without breaking contracts.", tags: ["Compatibility", "Migration"], link: "/docs-guides/compatibility-matrix" },
+  { icon: "📦", title: "Schema & Format Reference", desc: "JSON schema definitions, Markdown format specs, and YAML guardrail structures used across all product types.", tags: ["Schema", "JSON", "YAML"], link: "/api-registry" },
+  { icon: "🔧", title: "Skill Module Integration", desc: "How to install and call SKILL.md modules, handle tool routing, validate IO, and wire error retry patterns into your agent stack.", tags: ["Skill", "Tool Use"], link: "/docs-guides/skill-module" },
 ];
 
 export default function DocsGuidesPage() {
@@ -28,13 +34,13 @@ export default function DocsGuidesPage() {
             {GUIDES.map((g) => (
               <div key={g.title} className="content-block" style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
                 <div style={{ fontSize: "2rem" }}>{g.icon}</div>
-                <h3 dangerouslySetInnerHTML={{ __html: g.title }} />
+                <h3>{g.title}</h3>
                 <p style={{ fontSize: "0.875rem", flex: 1 }}>{g.desc}</p>
                 <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
                   {g.tags.map((t) => <span key={t} className="badge badge-plain">{t}</span>)}
                 </div>
                 <Link href={g.link} className="btn btn-outline btn-sm" style={{ marginTop: "0.5rem", display: "inline-flex" }}>
-                  {g.link === "#" ? "Coming soon" : "View guide →"}
+                  View guide →
                 </Link>
               </div>
             ))}

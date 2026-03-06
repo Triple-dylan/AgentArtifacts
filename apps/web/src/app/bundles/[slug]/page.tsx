@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { loadBundles, loadCatalog, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
+import SaveToLibraryButton from "@/components/SaveToLibraryButton";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -196,6 +197,14 @@ export default async function BundleDetailPage({ params }: Props) {
                 ) : (
                   <div className="btn btn-buy" style={{ background: "var(--ink-subtle)", cursor: "default" }}>Coming soon</div>
                 )}
+                <SaveToLibraryButton
+                  id={bundle.bundle_id}
+                  slug={bundle.slug}
+                  name={bundle.name}
+                  category="bundle"
+                  price_label={bundle.price_label}
+                  type="bundle"
+                />
                 <p className="sidebar-note">Instant digital delivery after checkout</p>
                 <p className="sidebar-note">All {bundle.product_count} products delivered together</p>
               </div>
