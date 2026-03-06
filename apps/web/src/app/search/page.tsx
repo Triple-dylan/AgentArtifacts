@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { loadCatalog, loadBundles, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
+import ProductCover from "@/components/ProductCover";
 
 export const metadata: Metadata = {
   title: "Search",
@@ -89,7 +90,7 @@ export default async function SearchPage({ searchParams }: Props) {
                   <div className="bundle-grid">
                     {bundleResults.map((b) => (
                       <Link key={b.bundle_id} href={`/bundles/${b.slug}`} className="bundle-card" style={{ textDecoration: "none", color: "inherit" }}>
-                        <img className="bundle-card-img" src={b.cover_image_url} alt={b.name} style={{ height: "120px" }} />
+                        <ProductCover category="bundle" name={b.name} height={120} isBundle />
                         <div className="bundle-card-body">
                           <div className="bundle-card-name">{b.name}</div>
                           <div className="bundle-card-desc">{b.short_desc}</div>
@@ -110,7 +111,7 @@ export default async function SearchPage({ searchParams }: Props) {
                   <div className="product-grid">
                     {productResults.map((row) => (
                       <Link key={row.product_id} href={`/products/${row.slug}`} className="product-card" style={{ textDecoration: "none", color: "inherit" }}>
-                        <img className="product-card-img" src={row.cover_image_url} alt={row.name} />
+                        <ProductCover category={row.category} name={row.name} />
                         <div className="product-card-body">
                           <div className="product-card-badges"><span className={`badge ${categoryBadgeClass(row.category)}`}>{categoryLabel(row.category)}</span></div>
                           <div className="product-card-name">{row.name}</div>

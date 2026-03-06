@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { loadCatalog, categoryBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
 import SaveToLibraryButton from "@/components/SaveToLibraryButton";
+import ProductCover from "@/components/ProductCover";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -98,7 +99,7 @@ export default async function ProductDetailPage({ params }: Props) {
           <div className="detail-layout">
             <div className="detail-main">
               <div className="content-block" style={{ padding: "0", overflow: "hidden" }}>
-                <img src={row.cover_image_url} alt={row.name} style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }} />
+                <ProductCover category={row.category} name={row.name} height={240} />
                 <div style={{ padding: "1.5rem" }}>
                   <div className="product-card-badges" style={{ marginBottom: "0.75rem" }}>
                     <span className={`badge ${categoryBadgeClass(row.category)}`}>{categoryLabel(row.category)}</span>
@@ -185,7 +186,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   <div className="product-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
                     {related.map((r) => (
                       <Link key={r.product_id} href={`/products/${r.slug}`} className="product-card" style={{ textDecoration: "none", color: "inherit" }}>
-                        <img className="product-card-img" src={r.cover_image_url} alt={r.name} style={{ height: "100px" }} />
+                        <ProductCover category={r.category} name={r.name} height={100} />
                         <div className="product-card-body">
                           <div className="product-card-name" style={{ fontSize: "0.88rem" }}>{r.name}</div>
                           <div className="product-card-footer">

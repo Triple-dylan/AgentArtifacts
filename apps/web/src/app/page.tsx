@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { loadCatalog, loadBundles, catalogStats, categoryBadgeClass, modeBadgeClass, categoryLabel } from "@/lib/catalog";
+import ProductCover from "@/components/ProductCover";
 
 const FAQ = [
   { q: "What do I get after purchase?", a: "Digital files (Markdown, JSON, YAML) delivered instantly via the download page — including manifests and all docs listed on the product page." },
@@ -129,7 +130,7 @@ export default function HomePage() {
           <div className="product-grid">
             {featured.map((row) => (
               <Link key={row.product_id} href={`/products/${row.slug}`} className="product-card" style={{ textDecoration: "none", color: "inherit" }}>
-                <img className="product-card-img" src={row.cover_image_url} alt={row.name} />
+                <ProductCover category={row.category} name={row.name} />
                 <div className="product-card-body">
                   <div className="product-card-badges">
                     <span className={`badge ${categoryBadgeClass(row.category)}`}>{categoryLabel(row.category)}</span>
@@ -167,7 +168,7 @@ export default function HomePage() {
           <div className="bundle-grid">
             {featuredBundles.map((b) => (
               <Link key={b.bundle_id} href={`/bundles/${b.slug}`} className="bundle-card" style={{ textDecoration: "none", color: "inherit" }}>
-                <img className="bundle-card-img" src={b.cover_image_url} alt={b.name} />
+                <ProductCover category="bundle" name={b.name} isBundle />
                 <div className="bundle-card-body">
                   <div className="product-card-badges" style={{ marginBottom: "0.5rem" }}>
                     <span className="badge badge-bundle">Bundle</span>

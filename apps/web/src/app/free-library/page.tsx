@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { loadCatalog, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
+import ProductCover from "@/components/ProductCover";
 
 export default function FreeLibraryPage() {
   const all = loadCatalog();
@@ -44,7 +45,7 @@ export default function FreeLibraryPage() {
           <div className="product-grid">
             {freeMagnets.map((row) => (
               <div key={row.product_id} className="product-card">
-                <img className="product-card-img" src={row.cover_image_url} alt={row.name} />
+                <ProductCover category={row.category} name={row.name} />
                 <div className="product-card-body">
                   <div className="product-card-badges">
                     <span className={`badge ${categoryBadgeClass(row.category)}`}>{categoryLabel(row.category)}</span>

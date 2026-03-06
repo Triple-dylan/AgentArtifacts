@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { loadBundles, loadCatalog, categoryBadgeClass, categoryLabel } from "@/lib/catalog";
 import SaveToLibraryButton from "@/components/SaveToLibraryButton";
+import ProductCover from "@/components/ProductCover";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -107,7 +108,7 @@ export default async function BundleDetailPage({ params }: Props) {
           <div className="detail-layout">
             <div className="detail-main">
               <div className="content-block" style={{ padding: "0", overflow: "hidden" }}>
-                <img src={bundle.cover_image_url} alt={bundle.name} style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }} />
+                <ProductCover category="bundle" name={bundle.name} height={240} isBundle />
                 <div style={{ padding: "1.5rem" }}>
                   <div className="product-card-badges" style={{ marginBottom: "0.75rem" }}>
                     <span className="badge badge-bundle">Bundle</span>
@@ -161,7 +162,7 @@ export default async function BundleDetailPage({ params }: Props) {
                   <div className="bundle-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))" }}>
                     {otherBundles.map((b) => (
                       <Link key={b.bundle_id} href={`/bundles/${b.slug}`} className="bundle-card" style={{ textDecoration: "none", color: "inherit" }}>
-                        <img className="bundle-card-img" src={b.cover_image_url} alt={b.name} style={{ height: "120px" }} />
+                        <ProductCover category="bundle" name={b.name} height={120} isBundle />
                         <div className="bundle-card-body">
                           <div className="bundle-card-name" style={{ fontSize: "0.95rem" }}>{b.name}</div>
                           <div className="bundle-card-desc" style={{ fontSize: "0.8rem" }}>{b.short_desc}</div>
