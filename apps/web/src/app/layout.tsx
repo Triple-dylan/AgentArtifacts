@@ -49,9 +49,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/search" className="nav-link" style={{ border: "1px solid var(--border)", borderRadius: "6px" }}>
                 🔍 Search
               </Link>
-              <Link href="/account" className="nav-link" style={{ border: "1px solid var(--border)", borderRadius: "6px" }}>
-                Account
-              </Link>
             </div>
           </div>
         </nav>
