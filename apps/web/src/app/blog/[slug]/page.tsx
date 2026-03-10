@@ -13,15 +13,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
+  const title = post.meta_title || post.title;
+  const description = post.meta_description || post.excerpt;
   return {
-    title: post.meta_title || post.title,
-    description: post.meta_description || post.excerpt,
-    keywords: post.primary_keyword ? [post.primary_keyword] : undefined,
+    title,
+    description,
+    keywords: post.primary_keyword ? [post.primary_keyword, "AI agents", "Agent Artifacts"] : ["AI agents", "Agent Artifacts"],
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
-      title: post.meta_title || post.title,
-      description: post.meta_description || post.excerpt,
+      title,
+      description,
       type: "article",
       publishedTime: post.published_at,
+      url: `/blog/${slug}`,
+      authors: post.author ? [post.author] : undefined,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
     },
   };
 }
@@ -67,11 +77,45 @@ export default async function BlogPostPage({ params }: Props) {
           />
 
           <div style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid var(--border)", display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <Link href="/blog" className="btn btn-outline btn-sm">← All articles</Link>
-            <Link href="/catalog" className="btn btn-primary btn-sm">Browse catalog →</Link>
+            <Link href="/blog" className="btn btn-outline btn-sm">All articles</Link>
+            <Link href="/catalog" className="btn btn-primary btn-sm">Browse catalog</Link>
           </div>
         </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": post.title,
+          "description": post.meta_description || post.excerpt,
+          "author": { "@type": "Person", "name": post.author },
+          "datePublished": post.published_at,
+          "publisher": {
+            "@type": "Organization",
+            "name": "Agent Artifacts",
+            "url": "https://agentartifacts.io",
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://agentartifacts.io/blog/${slug}`,
+          },
+          ...(post.primary_keyword ? { keywords: post.primary_keyword } : {}),
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agentartifacts.io" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://agentartifacts.io/blog" },
+            { "@type": "ListItem", "position": 3, "name": post.title },
+          ],
+        }) }}
+      />
 
       <style>{`
         .blog-content { line-height: 1.75; color: var(--ink); }
@@ -135,7 +179,12 @@ function markdownToHtml(md: string): string {
 
   // Links and images
   html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) => {
+    const isInternal = href.startsWith("/") || href.startsWith("https://agentartifacts.io");
+    return isInternal
+      ? `<a href="${href}">${text}</a>`
+      : `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+  });
 
   // Unordered lists
   html = html.replace(/((?:^[-*] .+\n?)+)/gm, (block) => {

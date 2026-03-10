@@ -326,12 +326,12 @@ def main():
 
     posts_to_add = []
 
-    # 1. Roundup post
+    # 1. Roundup post (always generated)
     roundup = generate_roundup_post(new_products)
     posts_to_add.append(roundup)
     print(f"  Roundup: {roundup['title']}")
 
-    # 2. Per-category spotlight posts
+    # 2. One spotlight post for the largest category (cap at 2 posts total)
     by_category = {}
     cat_domains = {}
     for p in new_products:
@@ -341,12 +341,13 @@ def main():
         by_category.setdefault(cat, []).append(p)
         cat_domains.setdefault(cat, set()).add(domain_label)
 
-    for cat, prods in sorted(by_category.items()):
-        if len(prods) < 2:
-            continue  # skip categories with only 1 product
-        post = generate_category_post(cat, prods, cat_domains[cat])
-        posts_to_add.append(post)
-        print(f"  Category: {post['title']}")
+    if by_category:
+        top_cat = max(by_category, key=lambda c: len(by_category[c]))
+        top_prods = by_category[top_cat]
+        if len(top_prods) >= 2:
+            post = generate_category_post(top_cat, top_prods, cat_domains[top_cat])
+            posts_to_add.append(post)
+            print(f"  Spotlight: {post['title']}")
 
     # Deduplicate by slug
     existing_slugs = {p["slug"] for p in existing_posts}
