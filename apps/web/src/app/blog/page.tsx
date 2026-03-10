@@ -1,31 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { listBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Articles on AI agents, skill modules, prompt engineering, and building with Agent Artifacts.",
 };
 
-type Post = {
-  slug: string;
-  title: string;
-  excerpt?: string;
-  meta_description?: string;
-  published_at?: string;
-  primary_keyword?: string;
-};
-
-async function getBlogPosts(): Promise<Post[]> {
-  try {
-    const { listBlogPosts } = await import("@agent-artifacts/agent-runner");
-    return await listBlogPosts(20);
-  } catch {
-    return [];
-  }
-}
-
 export default async function BlogIndexPage() {
-  const posts = await getBlogPosts();
+  const posts = listBlogPosts(50);
 
   return (
     <>
@@ -65,11 +48,16 @@ export default async function BlogIndexPage() {
                     color: "inherit",
                   }}
                 >
-                  {post.primary_keyword && (
-                    <span className="badge badge-plain" style={{ fontSize: "0.72rem", marginBottom: "0.5rem", display: "inline-block" }}>
-                      {post.primary_keyword}
-                    </span>
-                  )}
+                  <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "0.5rem" }}>
+                    {post.primary_keyword && (
+                      <span className="badge badge-plain" style={{ fontSize: "0.72rem" }}>
+                        {post.primary_keyword}
+                      </span>
+                    )}
+                    {post.author && (
+                      <span style={{ fontSize: "0.75rem", color: "var(--ink-subtle)" }}>by {post.author}</span>
+                    )}
+                  </div>
                   <h2 style={{ fontSize: "1.15rem", fontWeight: 700, marginBottom: "0.4rem", lineHeight: 1.35 }}>
                     {post.title}
                   </h2>

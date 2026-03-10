@@ -1,13 +1,17 @@
-import { getBlogPost } from "@agent-artifacts/agent-runner";
+import { getBlogPost, listBlogPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export async function generateStaticParams() {
+  return listBlogPosts(100).map((p) => ({ slug: p.slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
+  const post = getBlogPost(slug);
   if (!post) return {};
   return {
     title: post.meta_title || post.title,
@@ -24,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
+  const post = getBlogPost(slug);
 
   if (!post) notFound();
 
@@ -46,11 +50,16 @@ export default async function BlogPostPage({ params }: Props) {
             </span>
           )}
           <h1 style={{ marginBottom: "0.75rem", lineHeight: 1.25 }}>{post.title}</h1>
-          {post.published_at && (
-            <time style={{ display: "block", fontSize: "0.85rem", color: "var(--ink-muted)", marginBottom: "2rem" }}>
-              {new Date(post.published_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-            </time>
-          )}
+          <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "2rem" }}>
+            {post.author && (
+              <span style={{ fontSize: "0.85rem", color: "var(--ink-muted)" }}>By {post.author}</span>
+            )}
+            {post.published_at && (
+              <time style={{ fontSize: "0.85rem", color: "var(--ink-muted)" }}>
+                {new Date(post.published_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+              </time>
+            )}
+          </div>
 
           <article
             className="blog-content"
@@ -98,7 +107,7 @@ function markdownToHtml(md: string): string {
 
   let html = md;
 
-  // Fenced code blocks (``` lang\n...\n```)
+  // Fenced code blocks
   html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
     const escaped = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     return `<pre><code class="language-${lang}">${escaped}</code></pre>`;
@@ -128,7 +137,7 @@ function markdownToHtml(md: string): string {
   html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
 
-  // Unordered lists — collect consecutive lines starting with - or *
+  // Unordered lists
   html = html.replace(/((?:^[-*] .+\n?)+)/gm, (block) => {
     const items = block.trim().split("\n").map((l) => `<li>${l.replace(/^[-*] /, "")}</li>`).join("");
     return `<ul>${items}</ul>`;
@@ -140,7 +149,7 @@ function markdownToHtml(md: string): string {
     return `<ol>${items}</ol>`;
   });
 
-  // Tables (| col | col |)
+  // Tables
   html = html.replace(/((?:^\|.+\|\n?)+)/gm, (block) => {
     const rows = block.trim().split("\n").filter((r) => !r.match(/^\|[-| :]+\|$/));
     if (rows.length === 0) return block;
@@ -153,7 +162,7 @@ function markdownToHtml(md: string): string {
     return `<table><thead><tr>${thCells}</tr></thead><tbody>${bodyRows}</tbody></table>`;
   });
 
-  // Paragraphs — wrap non-tagged blocks
+  // Paragraphs
   html = html.split("\n\n").map((block) => {
     const trimmed = block.trim();
     if (!trimmed) return "";

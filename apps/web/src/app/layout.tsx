@@ -29,6 +29,7 @@ const navLinks = [
   { label: "Free Library", href: "/free-library" },
   { label: "Pricing", href: "/pricing" },
   { label: "Docs", href: "/docs-guides" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="footer-col-title">Resources</div>
                 <div className="footer-links">
                   <Link href="/docs-guides" className="footer-link">Docs &amp; Guides</Link>
+                  <Link href="/blog" className="footer-link">Blog</Link>
                   <Link href="/api-registry" className="footer-link">API Registry</Link>
                   <Link href="/search" className="footer-link">Search</Link>
                 </div>
