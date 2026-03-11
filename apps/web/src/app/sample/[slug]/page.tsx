@@ -98,20 +98,13 @@ export default async function SamplePage({ params }: Props) {
               )}
 
               <div className="content-block" style={{ background: "var(--green-light)", borderColor: "rgba(26,107,80,0.2)" }}>
-                <h2 style={{ color: "var(--green)", marginBottom: "0.5rem" }}>Want the full version?</h2>
+                <h2 style={{ color: "var(--green)", marginBottom: "0.5rem" }}>More free assets</h2>
                 <p style={{ fontSize: "0.9rem", color: "var(--green)", marginBottom: "1rem" }}>
-                  The full product includes 20+ prompts, integration examples, and framework-specific schemas.
+                  Browse the full free library for more production-ready downloads.
                 </p>
-                <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                  {row.checkout_url && (
-                    <a href={row.checkout_url} className="btn btn-buy" style={{ display: "inline-flex", width: "auto" }} target="_blank" rel="noopener noreferrer">
-                      {row.cta_label || "Buy Full Version"} — {row.price_label}
-                    </a>
-                  )}
-                  <Link href={`/products/${slug}`} className="btn btn-outline" style={{ display: "inline-flex" }}>
-                    View product details →
-                  </Link>
-                </div>
+                <Link href="/free-library" className="btn btn-outline" style={{ display: "inline-flex" }}>
+                  Browse free library →
+                </Link>
               </div>
             </div>
 

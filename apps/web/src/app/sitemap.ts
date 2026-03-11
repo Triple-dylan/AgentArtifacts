@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { loadCatalog, loadBundles } from "@/lib/catalog";
+import { listBlogPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://agentartifacts.io";
@@ -41,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  const sampleRoutes: MetadataRoute.Sitemap = loadCatalog()
+  const freeRoutes: MetadataRoute.Sitemap = loadCatalog()
     .filter((row) => row.lead_magnet === "Y")
     .map((row) => ({
       url: `${base}/sample/${row.slug}`,
@@ -50,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.65,
     }));
 
-  return [...staticRoutes, ...productRoutes, ...bundleRoutes, ...sampleRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = listBlogPosts(200).map((post) => ({
+    url: `${base}/blog/${post.slug}`,
+    lastModified: new Date(post.published_at),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...productRoutes, ...bundleRoutes, ...freeRoutes, ...blogRoutes];
 }

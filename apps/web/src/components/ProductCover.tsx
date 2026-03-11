@@ -8,42 +8,36 @@ type CoverProps = {
 const COVER_CONFIG: Record<string, {
   gradient: string;
   accent: string;
-  icon: string;
   label: string;
   pattern: "lines" | "dots" | "grid" | "hex" | "circuit";
 }> = {
   prompt: {
     gradient: "linear-gradient(135deg, #0d3d2e 0%, #1a6b50 60%, #0f4d38 100%)",
-    accent: "rgba(52,211,153,0.15)",
-    icon: "💬",
+    accent: "rgba(52,211,153,0.18)",
     label: "Prompt Pack",
     pattern: "lines",
   },
   skill: {
     gradient: "linear-gradient(135deg, #1e0a4e 0%, #4c1d95 60%, #2d0f70 100%)",
-    accent: "rgba(167,139,250,0.15)",
-    icon: "⚙️",
+    accent: "rgba(167,139,250,0.18)",
     label: "Skill Module",
     pattern: "hex",
   },
   agent: {
     gradient: "linear-gradient(135deg, #0a1628 0%, #1e3a5f 60%, #0d2040 100%)",
-    accent: "rgba(96,165,250,0.15)",
-    icon: "🤖",
+    accent: "rgba(96,165,250,0.18)",
     label: "Agent",
     pattern: "circuit",
   },
   utility: {
     gradient: "linear-gradient(135deg, #1c0f00 0%, #78350f 60%, #451a03 100%)",
-    accent: "rgba(251,191,36,0.15)",
-    icon: "🔧",
+    accent: "rgba(251,191,36,0.18)",
     label: "Utility",
     pattern: "grid",
   },
   doc: {
     gradient: "linear-gradient(135deg, #111827 0%, #374151 60%, #1f2937 100%)",
-    accent: "rgba(209,213,219,0.12)",
-    icon: "📄",
+    accent: "rgba(209,213,219,0.14)",
     label: "Document",
     pattern: "dots",
   },
@@ -51,11 +45,78 @@ const COVER_CONFIG: Record<string, {
 
 const BUNDLE_CONFIG = {
   gradient: "linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%)",
-  accent: "rgba(99,102,241,0.2)",
-  icon: "📦",
+  accent: "rgba(99,102,241,0.22)",
   label: "Bundle",
   pattern: "grid" as const,
 };
+
+// SVG icons — clean geometric, no emojis
+function CategoryIcon({ category, isBundle, color }: { category: string; isBundle: boolean; color: string }) {
+  const s = { width: 40, height: 40, fill: "none", stroke: color, strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+
+  if (isBundle) {
+    return (
+      <svg viewBox="0 0 40 40" {...s}>
+        <rect x="6" y="12" width="28" height="20" rx="3" />
+        <path d="M6 18h28" />
+        <path d="M14 12V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4" />
+        <path d="M16 24h8" />
+      </svg>
+    );
+  }
+  if (category === "prompt") {
+    return (
+      <svg viewBox="0 0 40 40" {...s}>
+        <path d="M8 10h24a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H22l-6 5v-5H8a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2z" />
+        <path d="M13 17h14M13 22h8" />
+      </svg>
+    );
+  }
+  if (category === "skill") {
+    return (
+      <svg viewBox="0 0 40 40" {...s}>
+        <circle cx="20" cy="20" r="4" />
+        <path d="M20 6v4M20 30v4M6 20h4M30 20h4" />
+        <path d="M10.1 10.1l2.8 2.8M27.1 27.1l2.8 2.8M10.1 29.9l2.8-2.8M27.1 12.9l2.8-2.8" />
+      </svg>
+    );
+  }
+  if (category === "agent") {
+    return (
+      <svg viewBox="0 0 40 40" {...s}>
+        <rect x="10" y="12" width="20" height="18" rx="4" />
+        <circle cx="16" cy="20" r="2" />
+        <circle cx="24" cy="20" r="2" />
+        <path d="M16 28v3M24 28v3M14 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3" />
+        <path d="M4 22h6M30 22h6" />
+      </svg>
+    );
+  }
+  if (category === "utility") {
+    return (
+      <svg viewBox="0 0 40 40" {...s}>
+        <path d="M28 8c0 0-4 2-4 8s4 8 4 8l-2 2-8-8c-2 2-4 4-4 8H8l4-4c-2-4 0-8 4-10l2 2 4-4 6-2z" />
+        <path d="M14 26l-6 6" />
+      </svg>
+    );
+  }
+  if (category === "doc") {
+    return (
+      <svg viewBox="0 0 40 40" {...s}>
+        <path d="M10 6h14l8 8v20a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" />
+        <path d="M24 6v8h8" />
+        <path d="M14 20h12M14 26h8" />
+      </svg>
+    );
+  }
+  // fallback
+  return (
+    <svg viewBox="0 0 40 40" {...s}>
+      <rect x="8" y="8" width="24" height="24" rx="4" />
+      <path d="M14 20h12M20 14v12" />
+    </svg>
+  );
+}
 
 function PatternSVG({ type, accent }: { type: string; accent: string }) {
   if (type === "dots") {
@@ -125,6 +186,13 @@ function PatternSVG({ type, accent }: { type: string; accent: string }) {
 
 export default function ProductCover({ category, name, height = 160, isBundle = false }: CoverProps) {
   const cfg = isBundle ? BUNDLE_CONFIG : (COVER_CONFIG[category] ?? COVER_CONFIG.doc);
+  // Extract a bright version of the accent for the icon stroke
+  const iconColor = category === "prompt" ? "rgba(52,211,153,0.85)"
+    : category === "skill" ? "rgba(167,139,250,0.85)"
+    : category === "agent" ? "rgba(96,165,250,0.85)"
+    : category === "utility" ? "rgba(251,191,36,0.85)"
+    : isBundle ? "rgba(129,140,248,0.85)"
+    : "rgba(209,213,219,0.75)";
 
   return (
     <div
@@ -137,7 +205,7 @@ export default function ProductCover({ category, name, height = 160, isBundle = 
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: "0.5rem",
+        gap: "0.6rem",
         flexShrink: 0,
       }}
     >
@@ -159,26 +227,26 @@ export default function ProductCover({ category, name, height = 160, isBundle = 
       {/* Icon */}
       <div style={{
         position: "relative",
-        fontSize: "2.2rem",
-        lineHeight: 1,
-        filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))",
+        width: 44,
+        height: 44,
+        filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.4))",
       }}>
-        {cfg.icon}
+        <CategoryIcon category={category} isBundle={isBundle} color={iconColor} />
       </div>
 
       {/* Name */}
       <div style={{
         position: "relative",
-        color: "rgba(255,255,255,0.9)",
-        fontSize: "0.72rem",
+        color: "rgba(255,255,255,0.88)",
+        fontSize: "0.7rem",
         fontWeight: 700,
-        letterSpacing: "0.08em",
+        letterSpacing: "0.07em",
         textTransform: "uppercase",
         textAlign: "center",
         padding: "0 1rem",
         maxWidth: "90%",
         lineHeight: 1.3,
-        textShadow: "0 1px 4px rgba(0,0,0,0.5)",
+        textShadow: "0 1px 4px rgba(0,0,0,0.6)",
       }}>
         {name}
       </div>
